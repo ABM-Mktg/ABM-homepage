@@ -3,68 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABMize - Business Growth Solutions</title>
+  <title>ABMize - Full Design Match</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-white text-gray-900 font-sans">
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-pink-400 to-purple-300 text-white py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="md:w-1/2">
-          <h1 class="text-4xl font-bold mb-4">Comprehensive Business Growth Strategies & Solutions</h1>
-          <p class="mb-6">We create guaranteed business success & growth by implementing four forces that define business success.</p>
-          <a href="#contact" class="bg-white text-pink-600 px-6 py-2 rounded font-semibold shadow hover:bg-gray-100">Get Started</a>
+  <!-- Hero with overlay -->
+  <section class="relative">
+    <img src="abmize_assets/hero_people.png" alt="Team" class="w-full h-[500px] object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 text-white max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Comprehensive Business Growth Strategies & Solutions</h1>
+      <p class="text-lg max-w-xl">We create guaranteed business success & growth by implementing four forces that define business success.</p>
+      <a href="#contact" class="mt-6 inline-block bg-white text-pink-600 px-6 py-2 rounded font-semibold shadow hover:bg-gray-100">Get Started</a>
+    </div>
+  </section>
+
+  <!-- About with transparent box overlay -->
+  <section class="relative py-20 px-6 bg-gray-100">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="relative w-full md:w-1/2">
+        <img src="abmize_assets/about_us_team.png" alt="About Us" class="w-full rounded shadow-lg">
+        <div class="absolute top-4 left-4 bg-pink-600 bg-opacity-80 text-white p-4 rounded shadow-lg">
+          <h2 class="text-xl font-semibold">About Us</h2>
+          <p class="text-sm mt-2">From first-time CEOs to seasoned entrepreneurs, we guide businesses through transformation using structured frameworks and guaranteed growth strategy.</p>
         </div>
-        <div class="md:w-1/2 mt-6 md:mt-0">
-          <img src="abmize_assets/hero_people.png" alt="Team" class="rounded shadow-lg w-full max-w-md mx-auto" />
-        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <p class="text-gray-700 text-lg">Our consulting practice delivers end-to-end solutions for long-term brand, financial, and operational success. We work closely with teams to activate leverage and influence across key functions.</p>
       </div>
     </div>
   </section>
 
-  <!-- About Us -->
-  <section class="bg-yellow-100 py-16 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold mb-4">About Us</h2>
-        <p class="text-gray-700">From first-time CEOs to seasoned entrepreneurs, our strategies are proven to create business transformation through proven frameworks...</p>
+  <!-- Growth Matrix with labeled overlays -->
+  <section class="py-20 px-6 bg-white">
+    <h2 class="text-3xl text-center font-bold mb-12">The Growth Matrix: Four Forces That Define Business Success</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="relative">
+        <img src="abmize_assets/growth_chart.png" class="w-full rounded shadow" alt="Growth Strategy">
+        <div class="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white p-3 rounded">Growth Strategy</div>
       </div>
-      <div class="md:w-1/2 mt-6 md:mt-0">
-        <img src="abmize_assets/about_us_team.png" alt="About Us Team" class="rounded shadow-lg" />
+      <div class="relative">
+        <img src="abmize_assets/retention_discussion.png" class="w-full rounded shadow" alt="Retention">
+        <div class="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white p-3 rounded">Customer Retention</div>
       </div>
-    </div>
-  </section>
-
-  <!-- Growth Matrix -->
-  <section class="bg-green-100 py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center text-pink-700 mb-10">The Growth Matrix: Four Forces That Define Business Success</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div><img src="abmize_assets/growth_chart.png" alt="Growth Chart" class="rounded shadow" /></div>
-        <div><img src="abmize_assets/retention_discussion.png" alt="Retention Discussion" class="rounded shadow" /></div>
-        <div><img src="abmize_assets/business_credit.png" alt="Business Credit" class="rounded shadow" /></div>
-        <div><img src="abmize_assets/reputation_expert.png" alt="Reputation Expert" class="rounded shadow" /></div>
+      <div class="relative">
+        <img src="abmize_assets/business_credit.png" class="w-full rounded shadow" alt="Credit System">
+        <div class="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white p-3 rounded">Business Credit</div>
+      </div>
+      <div class="relative">
+        <img src="abmize_assets/reputation_expert.png" class="w-full rounded shadow" alt="Brand Reputation">
+        <div class="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white p-3 rounded">Brand Reputation</div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action Section -->
-  <section class="bg-gradient-to-r from-orange-100 to-pink-200 py-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4 text-gray-800">Your Next Step</h2>
-      <p class="mb-6 text-gray-700">Work with our team to build a customized, scalable business growth plan.</p>
-      <img src="abmize_assets/cta_collaboration.png" alt="CTA Collaboration" class="mx-auto mb-6 rounded shadow-lg" />
-      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">Get Started</a>
+  <!-- CTA Section -->
+  <section class="relative bg-pink-100 py-20 text-center px-6">
+    <div class="max-w-2xl mx-auto">
+      <img src="abmize_assets/cta_collaboration.png" class="mx-auto mb-8 rounded shadow-xl" alt="Collaboration CTA">
+      <h2 class="text-2xl font-bold mb-4">Ready to grow your business?</h2>
+      <p class="mb-6 text-gray-700">Let’s build a customized strategy for your goals. We partner closely with our clients for measurable, sustainable growth.</p>
+      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Start Now</a>
     </div>
   </section>
 
   <!-- Contact Form -->
-  <section id="contact" class="bg-white py-16 px-6">
-    <div class="max-w-xl mx-auto text-center">
-      <h3 class="text-2xl font-semibold mb-6">Contact Us</h3>
-      <form action="https://formspree.io/f/mrbkawek" method="POST" class="space-y-4 text-left bg-gray-50 p-6 shadow-lg rounded">
+  <section id="contact" class="bg-gray-50 py-16 px-6">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded shadow">
+      <h3 class="text-2xl font-semibold text-center mb-6">Contact Us</h3>
+      <form action="https://formspree.io/f/mrbkawek" method="POST" class="space-y-4">
         <label class="block">
           <span class="text-gray-700">Name</span>
           <input type="text" name="name" required class="w-full mt-1 p-2 border rounded" />
@@ -77,7 +85,7 @@
           <span class="text-gray-700">Message</span>
           <textarea name="message" rows="4" class="w-full mt-1 p-2 border rounded"></textarea>
         </label>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
       </form>
     </div>
   </section>
