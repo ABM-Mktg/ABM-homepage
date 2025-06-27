@@ -1,122 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vision 2 Reality Youth Programs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision to Reality Programs - Youth Entrepreneurship & Apprenticeship Programs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background: linear-gradient(to right, #f9d423, #ff4e50);
-      color: #333;
-      padding: 20px;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
 
-    header {
-      background-color: #fff;
-      padding: 1em;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    header h1 {
-      color: #ff4e50;
-      font-size: 2.5em;
-    }
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-    section {
-      margin-top: 30px;
-      background: #ffffffcc;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    h2 {
-      color: #f76b1c;
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
 
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    .gallery {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-    .gallery img {
-      border-radius: 12px;
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      object-fit: cover;
-    }
+        .nav-links a:hover {
+            color: #ffd700;
+        }
 
-    .cta {
-      background-color: #ff4e50;
-      color: #fff;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.2em;
-      margin-top: 20px;
-      cursor: pointer;
-      display: inline-block;
-      transition: background 0.3s ease;
-      text-decoration: none;
-    }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .cta:hover {
-      background-color: #f44236;
-    }
-  </style>
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: slideInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            color: #333;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Floating Elements */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape1 {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: -1s;
+        }
+
+        .shape2 {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 15%;
+            animation-delay: -3s;
+        }
+
+        .shape3 {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -5s;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(240, 147, 251, 0.3);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: transform 0.6s;
+        }
+
+        .service-card:hover::before {
+            transform: rotate(45deg) translate(20px, 20px);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card p {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Program Structure */
+        .program-structure {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .phase {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .phase:hover {
+            transform: scale(1.05);
+        }
+
+        .phase-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        /* Alternative to College */
+        .college-alternative {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Vision 2 Reality Youth Programs</h1>
-    <p>Empowering the Next Generation of Leaders</p>
-  </header>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Vision to Reality Programs</a>
+            <ul class="nav-links">
+                <li><a href="#services">Programs</a></li>
+                <li><a href="#structure">How It Works</a></li>
+                <li><a href="#alternative">Why Choose Us</a></li>
+                <li><a href="#contact">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section>
-    <h2>Our Mission</h2>
-    <p>We aim to inspire, educate, and prepare youth through vibrant programs that equip them for success in academics, career, and life. Our programs are free, fun, and designed to ignite their full potential.</p>
-  </section>
+    <section class="hero">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Turn Your Vision Into Reality</h1>
+                <p>Youth entrepreneurship and apprenticeship programs that transform your ideas into successful businesses and careers</p>
+                <a href="#contact" class="cta-button">Start Building Your Future</a>
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Mentorship & Leadership Training</li>
-      <li>College & Career Readiness</li>
-      <li>Entrepreneurship & Financial Literacy</li>
-      <li>STEM & Arts Enrichment</li>
-    </ul>
-  </section>
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Programs & Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🚀 Idea Incubation</h3>
+                    <p>Transform your raw ideas into viable business concepts through guided brainstorming, market research, and strategic planning sessions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🔧 Industry Apprenticeships</h3>
+                    <p>Get hands-on experience in your chosen field through partnerships with local companies. We handle the outreach and placement process.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>📈 Digital Marketing Mastery</h3>
+                    <p>Learn lead generation, SEO, social media marketing, and content creation with real-world projects and certifications.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🎯 Custom Skills Development</h3>
+                    <p>Tailored training programs in trades, technology, creative arts, and entrepreneurship based on your interests and goals.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>👥 Mentorship Network</h3>
+                    <p>Connect with successful professionals and entrepreneurs who provide ongoing guidance and industry insights.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>💼 Professional Development</h3>
+                    <p>Build your professional brand, master interview skills, and develop workplace communication abilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>Get Involved</h2>
-    <p>Sign up today to empower your future! We welcome youth of all backgrounds and encourage parents to enroll their children for a transformative journey.</p>
-    <a href="https://docs.google.com/forms" target="_blank" class="cta">Sign Up Now</a>
-  </section>
+    <section class="program-structure" id="structure">
+        <div class="container">
+            <h2 class="section-title">How Our Program Works</h2>
+            <div class="phases">
+                <div class="phase">
+                    <div class="phase-number">01</div>
+                    <h3>Dream Discovery</h3>
+                    <p>Identify your passions, generate business ideas, and validate market opportunities through creative workshops and research.</p>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-number">02</div>
+                    <h3>Skills & Industry Immersion</h3>
+                    <p>Gain hands-on experience through apprenticeships, custom training, and real-world projects in your chosen field.</p>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-number">03</div>
+                    <h3>Launch & Scale</h3>
+                    <p>Execute your business plan with ongoing mentorship, funding opportunities, and continued support from our alumni network.</p>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-number">04</div>
+                    <h3>Meet & Stay Motivated</h3>
+                    <p>Stay connected to other like-minded students and youth to help stay connected, motivated and disciplined throughout your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="gallery">
-    <img src="https://source.unsplash.com/featured/?youth" alt="Youth Program 1">
-    <img src="https://source.unsplash.com/featured/?students" alt="Youth Program 2">
-    <img src="https://source.unsplash.com/featured/?education" alt="Youth Program 3">
-  </section>
+    <section class="college-alternative" id="alternative">
+        <div class="container">
+            <h2 class="section-title">Why Choose Vision to Reality Programs?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">❤️</div>
+                    <h3>Build a Business You Love</h3>
+                    <p>Create something you're passionate about and have fun while building your future success.</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Work in Interesting Fields</h3>
+                    <p>Focus on industries that excite you or explore high-demand career paths with real opportunities.</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>We Guide You the Whole Way</h3>
+                    <p>From initial idea to successful launch, our mentors and staff support you every step of your journey.</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Meet Like-Minded Youth</h3>
+                    <p>Connect with other ambitious young entrepreneurs who share your drive and vision for success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Turn Your Vision Into Reality?</h2>
+            <p>Join Vision to Reality Programs and transform your ideas into a successful career or business</p>
+            <a href="#" class="cta-button">Apply Now</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(102, 126, 234, 0.95)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards and phases
+        document.querySelectorAll('.service-card, .phase, .benefit').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
