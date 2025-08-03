@@ -79,22 +79,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const termsBtn = document.querySelector('.footer-link button');
+    // Terms of Use Modal functionality
+    const termsBtn = Array.from(document.querySelectorAll('.footer-link button')).find(btn => btn.textContent.trim() === 'Terms Of Use');
     const termsModal = document.getElementById('termsModal');
     const closeTermsModal = document.getElementById('closeTermsModal');
 
     function openTermsModal() {
-        termsModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        if (termsModal) {
+            termsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     }
 
     function closeTermsModalFunc() {
-        termsModal.classList.remove('active');
-        document.body.style.overflow = '';
+        if (termsModal) {
+            termsModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     }
 
     if (termsBtn) {
-        termsBtn.addEventListener('click', openTermsModal);
+        termsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openTermsModal();
+        });
     }
 
     if (closeTermsModal) {

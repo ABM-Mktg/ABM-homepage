@@ -1462,7 +1462,7 @@ body {
 }
 
 .modal-header h2 {
-    font-family: 'Clash Display', sans-serif;
+    font-family: 'Clash Display', sans-serif !important;
     font-size: 46px;
     font-weight: 600;
     color: #2D2D2D;
