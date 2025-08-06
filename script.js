@@ -237,19 +237,59 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (personalInfoForm) {
-        personalInfoForm.addEventListener('submit', function(e) {
+        personalInfoForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const formData = new FormData(personalInfoForm);
-            const data = Object.fromEntries(formData);
+            // Disable submit button to prevent multiple submissions
+            const submitBtn = personalInfoForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Submitting...';
             
-            console.log('Form submitted:', data);
-            
-            alert('Thank you! Your information has been submitted successfully.');
-            
-            closePersonalInfoModalFunc();
-            
-            personalInfoForm.reset();
+            try {
+                const formData = new FormData(personalInfoForm);
+                
+                // Prepare data for Web3Forms API
+                const apiFormData = new FormData();
+                apiFormData.append("First Name", formData.get('firstName'));
+                apiFormData.append("Last Name", formData.get('lastName'));
+                apiFormData.append("Email", formData.get('email'));
+                apiFormData.append("Phone Number", formData.get('phone'));
+                apiFormData.append("Address", formData.get('address'));
+                apiFormData.append("City, State, Zip", formData.get('cityStateZip'));
+                apiFormData.append("Age", formData.get('age'));
+                apiFormData.append("School", formData.get('school'));
+                apiFormData.append("access_key", "bc6ca07f-e8a7-4fd8-8800-162ca31beb41");
+                
+                const object = Object.fromEntries(apiFormData);
+                const json = JSON.stringify(object);
+                
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: json,
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert('Thank you! Your information has been submitted successfully.');
+                    closePersonalInfoModalFunc();
+                    personalInfoForm.reset();
+                } else {
+                    alert('Failed to submit form. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('An error occurred. Please try again.');
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
         });
     }
 

@@ -2552,6 +2552,20 @@ body {
     color: white;
 }
 
+.submit-btn:disabled {
+    background: linear-gradient(180deg, #888888 0%, #666666 100%);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.submit-btn:disabled:hover {
+    background: linear-gradient(180deg, #888888 0%, #666666 100%);
+}
+
+.submit-btn:disabled .submit-btn-icon {
+    background: linear-gradient(180deg, #666666 0%, #444444 100%);
+}
+
 @media (max-width: 600px) {
     .form-row {
         grid-template-columns: 1fr;
