@@ -2350,6 +2350,10 @@ body {
     color: #666666;
     margin: 0;
 }
+.call-me{
+    text-decoration: none;
+    color: black;
+}
 
 /* ========================================
    PERSONAL INFORMATION MODAL

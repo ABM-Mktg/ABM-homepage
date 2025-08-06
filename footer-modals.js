@@ -150,6 +150,7 @@ function openTermsModal() {
                     <h2 class="contact-details">Contact Details</h2>
                     <h2 class="company"><b>Company:</b> ABM, LLC</h2>
                     <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
+                      <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
                 </div>
             </div>
      
@@ -311,6 +312,7 @@ function openPrivacyModal() {
                     <h2 class="contact-details">Contact Details</h2>
                     <h2 class="company"><b>Company:</b> ABM, LLC</h2>
                     <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
+                      <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
                 </div>
 
             </div>
@@ -412,6 +414,7 @@ function openCookiesModal() {
                     <h2 class="contact-details">Contact Details</h2>
                     <h2 class="company"><b>Company:</b> ABM, LLC</h2>
                     <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
+                      <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
                 </div>
 
                 <p class="resp-time"><b>Response Time:</b> We strive to respond to all inquiries within 72 hours /
@@ -1456,6 +1459,10 @@ function addModalCSS() {
   color: white;
 }
 
+.call-me{
+    text-decoration: none;
+    color: black;
+}
 @media (max-width: 600px) {
   .form-row {
     grid-template-columns: 1fr;
@@ -1662,6 +1669,8 @@ function addModalCSS() {
     width: fit-content;
   }
 }
+
+
 
         `;
     document.head.appendChild(style);

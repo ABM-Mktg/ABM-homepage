@@ -240,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
         personalInfoForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Disable submit button to prevent multiple submissions
             const submitBtn = personalInfoForm.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
             submitBtn.disabled = true;
@@ -249,7 +248,6 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 const formData = new FormData(personalInfoForm);
                 
-                // Prepare data for Web3Forms API
                 const apiFormData = new FormData();
                 apiFormData.append("First Name", formData.get('firstName'));
                 apiFormData.append("Last Name", formData.get('lastName'));
@@ -286,7 +284,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Error submitting form:', error);
                 alert('An error occurred. Please try again.');
             } finally {
-                // Re-enable submit button
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
             }
