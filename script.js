@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 apiFormData.append("City, State, Zip", formData.get('cityStateZip'));
                 apiFormData.append("Age", formData.get('age'));
                 apiFormData.append("School", formData.get('school'));
-                apiFormData.append("access_key", "bc6ca07f-e8a7-4fd8-8800-162ca31beb41");
+                apiFormData.append("access_key", "526f4210-ea17-48fb-9464-cd7d4297d9de");
                 
                 const object = Object.fromEntries(apiFormData);
                 const json = JSON.stringify(object);
