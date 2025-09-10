@@ -1,0 +1,656 @@
+/* Modal Styles - Copied from ABM-homepage-main */
+
+/* Base Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    border-radius: 30px;
+    max-width: 1240px;
+    width: 95%;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0px 4px 30px 0px #D9305B99;
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-modal-sticky {
+    width: 100%;
+    background: white;
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-header {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.modal-header h2 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 46px;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-bottom: 10px;
+}
+
+.modal-header p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    background: white !important;
+    right: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.1);
+}
+
+.modal-content {
+    width: 100%;
+    margin: auto;
+    padding: 0px 20px 40px 20px;
+    overflow-y: auto;
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: #CCCCCC #F5F5F5;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Apply DM Sans to all content elements except main modal titles */
+.modal-content *:not(.modal-header h2):not(.terms-header h2) {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #F5F5F5;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #CCCCCC;
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #AAAAAA;
+}
+
+/* Terms Header */
+.terms-header {
+    padding: 81px 20px 71px 20px;
+}
+
+.terms-header h2 {
+    color: #2D2D2D;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 57px;
+    margin-bottom: 0;
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+.terms-content {
+    max-width: 1165px;
+    margin: auto;
+    width: 100%;
+}
+
+.terms-section {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #CACACA;
+}
+
+.terms-section:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid transparent;
+}
+
+.terms-section:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section h3 {
+    font-size: 36px;
+    line-height: 47px;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-bottom: 15px;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.terms-section h3 span {
+    background: linear-gradient(180deg, #387858 0%, #D0D370 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.terms-section p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #666666;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.terms-section p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section-list {
+    background: linear-gradient(180deg, rgba(56, 120, 88, 0.05) 0%, rgba(208, 211, 112, 0.05) 100%);
+    padding: 20px;
+    border-radius: 20px;
+    border-bottom: none;
+}
+
+.terms-section-list-heading {
+    font-size: 22px;
+    line-height: 30px;
+    color: #666666;
+    font-weight: 500;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.terms-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0px 0px 0px;
+}
+
+.terms-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #666666;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.terms-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 20px;
+    height: 17.68px;
+    background-image: url('./assets/images/arrow-checkbox.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+/* Hide the ::before pseudo-element for list items that have green-tick icons */
+.terms-list li.with-green-tick::before {
+    display: none;
+}
+
+/* Adjust padding for list items with green-tick icons */
+.terms-list li.with-green-tick {
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.terms-list li:last-child {
+    margin-bottom: 0;
+}
+
+.disclaimer-bold {
+    font-weight: 700 !important;
+    color: #2D2D2D !important;
+}
+
+/* Contact Details */
+.contact-details {
+    margin: 8px 0px 10px 0px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 18px !important;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.email {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.call-me {
+    text-decoration: none;
+    color: black;
+}
+
+.resp-time {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+/* Cookie Policy Styles */
+.cookie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cookie-grid>*:nth-last-child(1):nth-child(odd) {
+    grid-column: span 2;
+}
+
+.cookie-card {
+    background: linear-gradient(180deg, rgba(56, 120, 88, 0.1) 0%, rgba(208, 211, 112, 0.1) 100%);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.cookie-card h4 {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #387858 0%, #D0D370 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.cookie-card p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #666666;
+    margin: 0;
+}
+
+.cookie-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #2D2D2D;
+}
+
+.cookie-card h3 a {
+    font-weight: 500;
+    color: #2D2D2D;
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.cookie-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.cookie-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.cookie-list li span {
+    background: linear-gradient(180deg, #387858 0%, #D0D370 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.managing-cookies-heading {
+    color: #2D2D2D;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cookie-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 17.68px;
+    height: 17.68px;
+    background-image: url('./assets/images/circle-gradient.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cookie-list li:last-child {
+    margin-bottom: 0;
+}
+
+.cookie-section-list {
+    background: linear-gradient(180deg, rgba(56, 120, 88, 0.05) 0%, rgba(208, 211, 112, 0.05) 100%);
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+.type-cookie-section-list {
+    border: none;
+    padding: 0px;
+}
+
+.third-party-heading {
+    color: #2D2D2D;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+/* Privacy Policy Styles */
+.card-privay {
+    background: linear-gradient(180deg, rgba(56, 120, 88, 0.1) 0%, rgba(208, 211, 112, 0.1) 100%);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card-privay h5 {
+    color: #2D2D2D;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.card-privay:last-child {
+    margin-top: 20px;
+}
+
+.personal-info-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.personal-info-card>div p {
+    font-weight: 500;
+    color: #2D2D2D;
+}
+
+.share-your-info-heading {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.privacy-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+.automatically-collected-info-para {
+    font-weight: 500 !important;
+    color: #2D2D2D !important;
+}
+
+.privacy-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #666666;
+}
+
+.privacy-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 14px;
+    height: 14px;
+    background-image: url('./assets/images/circle-gradient.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.privacy-list li:last-child {
+    margin-bottom: 0;
+}
+
+.your-info-heading {
+    font-size: 18px;
+    line-height: 30px;
+    color: #2D2D2D;
+    font-weight: 500;
+}
+
+.last-update {
+    margin-bottom: 14px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .modal {
+        border-radius: 20px;
+    }
+
+    .terms-header h2 {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+    .terms-section h3 {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 8px;
+    }
+
+    .terms-section p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .terms-section {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .terms-section-list {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .terms-section-list-heading {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .terms-list li::before {
+        width: 15px;
+        top: 2px;
+        height: 16.68px;
+    }
+
+    .terms-list li {
+        padding-left: 20px;
+        margin-bottom: 4px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /* Mobile styles for green tick icons */
+    .terms-list li.with-green-tick {
+        padding-left: 0;
+    }
+
+    .terms-list li.with-green-tick img {
+        width: 15px !important;
+        height: 15px !important;
+        margin-right: 8px !important;
+    }
+
+    .terms-list {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .cookie-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .cookie-grid>*:nth-last-child(1):nth-child(odd) {
+        grid-column: span 1;
+    }
+
+    .cookie-card {
+        border-radius: 12px;
+        padding: 12px;
+    }
+
+    .cookie-card h4 {
+        font-size: 16px;
+        margin-bottom: 4px;
+        line-height: 24px;
+    }
+
+    .cookie-card p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .personal-info-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card-privay {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .card-privay h5 {
+        margin-bottom: 6px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .privacy-list {
+        margin: 8px 0;
+    }
+
+    .privacy-list li {
+        padding-left: 20px;
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .privacy-list li:before {
+        top: 3px;
+    }
+
+    .card-privay:last-child {
+        margin-top: 12px;
+    }
+
+    .your-info-heading {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Circle gradient styling for rights and choices */
+.cookie-list li.with-circle-gradient::before {
+    display: none;
+}
+
+.cookie-list li.with-circle-gradient {
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+}
