@@ -76,7 +76,7 @@ function NextStep({ openContactModal }) {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center mt-6 mb-10 gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center mt-6 mb-10 gap-8">
           <button
             onClick={openContactModal}
             className="flex items-center bg-[#68EF78] hover:bg-[#68EF78] text-[#1D1B1D] text-[16px] font-semibold px-3 py-[7px] rounded-full font-nunito max-w-[200px] w-full sm:w-auto"

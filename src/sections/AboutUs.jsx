@@ -4,7 +4,7 @@ import dots from "../assets/images/black-dots.svg";
 
 function AboutUs(props) {
   return (
-    <div id="about-us" className="min-h-[102vh] bg-[#F3C387] w-full -mt-[300px] md:-mt-[150px] relative z-0 px-6 pt-20 pb-0">
+    <div id="about-us" className="min-h-[102vh] bg-[#F3C387] w-full -mt-[300px] sm:-mt-[225px] lg:-mt-[150px] xl:-mt-[225px] relative z-0 px-6 pt-20 pb-0">
       {/* Content container */}
       <div className=" md:max-w-[85%] max-w-[90%] mx-auto relative mt-[16rem] md:mt-36">
         {/* Main content area with image and text overlay */}
@@ -32,7 +32,7 @@ function AboutUs(props) {
             About Us
           </h2>
           {/* Text overlay with light blue background */}
-          <div className="relative z-10 w-full w-[85%] md:w-[65%] bg-[#5FBEDE]/70 p-4 sm:p-6 md:p-8   md:h-[608px] top-60 md:top-[44px] sm:top-11">
+          <div className="relative z-10 w-full w-[85%] md:w-[65%] bg-[#5FBEDE]/70 p-4 sm:p-6 md:p-8   lg:h-[608px] top-60 md:top-[44px] sm:top-11">
             <div className="space-y-4 text-[#555555]">
               <p className="text-[16px] leading-relaxed">
                 Born from Fortune 500 expertise, reimagined for entrepreneurial

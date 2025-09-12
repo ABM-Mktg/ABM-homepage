@@ -3,22 +3,22 @@ import LeftImage from "../assets/images/credit.png";
 
 function BusinessCredit(props) {
   return (
-    <div id="business-credit" className="min-h-[80vh] md:min-h-[75vh] bg-[#00ffff] w-full pt-16 pb-0">
-      <div className="flex flex-col md:flex-row md:w-[85%] w-full mx-auto items-center justify-center">
+    <div id="business-credit" className="min-h-[80vh] lg:min-h-[75vh] bg-[#00ffff] w-full pt-16 pb-0">
+      <div className="flex flex-col lg:flex-row lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto items-center justify-center">
         <div>
           <img
             src={LeftImage}
             alt="Digital Marketing"
-            className="md:w-[665px] md:h-[517px]"
+            className="lg:w-[665px] lg:h-[517px]"
           />
         </div>
-        <div className="items-start flex flex-col pt-4 px-5 md:px-0">
-          <h2 className="font-medium text-[40px] font-clash text-black">
+        <div className="items-start flex flex-col pt-4 px-5 lg:px-0">
+          <h2 className="font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black">
             Business Credit: Your 
-          <br className="hidden md:flex"/>
+          <br className="hidden lg:flex"/>
              &nbsp;Growth Foundation
           </h2>
-          <p className="text-[16px] font-nunito text-[#1D1B1D] mb-[24px] leading-relaxed font-medium max-w-2xl">
+          <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-nunito text-[#1D1B1D] mb-[24px] leading-relaxed font-medium max-w-2xl">
             Without strong business credit, growth hits a ceiling. Separating
             personal and business credit is crucial for sustainable scaling.
           </p>

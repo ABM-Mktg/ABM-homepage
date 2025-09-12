@@ -1,0 +1,90 @@
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+  .nest-hub-container {
+    margin-bottom: -164px !important;
+  }
+  
+  .nest-hub-content {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  
+  .nest-hub-paragraph {
+    max-width: 100% !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .nest-hub-button-area {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .nest-hub-small-image-desktop {
+    display: none !important;
+  }
+  
+  .nest-hub-images-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin-bottom: 3rem !important;
+    gap: 0.5rem !important; /* Reduced gap from 1.5rem to 0.5rem */
+    width: 100% !important;
+  }
+  
+  .nest-hub-small-image-tablet {
+    display: block !important;
+    width: 25% !important;
+  }
+  
+  .nest-hub-medium-image {
+    width: 32% !important;
+  }
+  
+  .nest-hub-large-image {
+    width: 38% !important;
+  }
+  
+  /* About Us section fixes - just reduce text size */
+  .about-us-section {
+    margin-top: -120px !important; /* Move About Us section up to reduce blank space */
+  }
+  
+  /* About Us paragraph text size reduction for nest hub */
+  #about-us .space-y-4 p {
+    font-size: 14px !important;
+  }
+  
+  /* Growth Matrix main heading only - first paragraph */
+  .growth-matrix-heading p:first-child {
+    margin-top: 80px !important; /* Add positive margin above the first heading line only */
+  }
+  
+  /* Digital Marketing content text size reduction for nest hub */
+  .digital-marketing-content h2 {
+    font-size: 32px !important;
+  }
+  
+  .digital-marketing-content p {
+    font-size: 14px !important;
+  }
+  
+  .digital-marketing-content h3 {
+    font-size: 16px !important;
+  }
+  
+  .digital-marketing-content ul li {
+    font-size: 14px !important;
+  }
+  
+  /* Reputation section */
+  .reputation-section {
+    margin-top: -94px !important; /* Increase negative margin to reduce space */
+  }
+  
+  /* Contact Modal width increase for nest hub only */
+  .contact-modal-container {
+    max-width: 900px !important;
+    width: 93% !important;
+  }
+}

@@ -13,9 +13,16 @@ import YouthProgram from "./sections/YouthProgram";
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalSource, setModalSource] = useState("default");
 
-  const openContactModal = () => setIsContactModalOpen(true);
-  const closeContactModal = () => setIsContactModalOpen(false);
+  const openContactModal = (source = "default") => {
+    setModalSource(source);
+    setIsContactModalOpen(true);
+  };
+  const closeContactModal = () => {
+    setIsContactModalOpen(false);
+    setModalSource("default");
+  };
 
   return (
     <div className="overflow-hidden ">
@@ -26,10 +33,10 @@ function App() {
       <CustomerRetention />
       <Reputation />
       <FlexibleApproach/>
-      <NextStep openContactModal={openContactModal} />
-      <YouthProgram openContactModal={openContactModal} />
+      <NextStep openContactModal={() => openContactModal("get-started")} />
+      <YouthProgram />
       <Footer/>
-      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
+      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} source={modalSource} />
     </div>
   );
 }

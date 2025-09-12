@@ -3,25 +3,25 @@ import LeftImage from "../assets/images/reputation-1.png";
 
 function Reputation(props) {
   return (
-    <div id="reputation-management" className="w-full md:-mt-[6.5%] bg-[#F3C387] min-h-[70vh] sm:-mt-[35%] -mt-[29%]">
-      <div className="flex flex-col md:flex-row md:w-[85%] w-full mx-auto items-center justify-center pt-[3%] md:pt-[5%]">
+    <div id="reputation-management" className="w-full lg:-mt-[6.8%] bg-[#F3C387] min-h-[70vh] lg:-mt-[35%] -mt-[39%] reputation-section">
+      <div className="flex flex-col lg:flex-row lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto items-center justify-center pt-[3%] lg:pt-[5%]">
         <div className="">
           <img
             src={LeftImage}
             alt="Digital Marketing"
-            className="md:w-[665px] md:h-[517px]"
+            className="lg:w-[665px] lg:h-[517px]"
           />
         </div>
         <div className="flex flex-col px-4">
           {/* Headings */}
-          <h1 className="font-clash font-medium text-[40px] text-black leading-tight mb-3">
+          <h1 className="font-clash font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] text-black leading-tight mb-3">
             Reputation Management: Your
             <br />
             Market Value Driver
           </h1>
 
           {/* Paragraph */}
-          <p className="text-[18px] font-nunito font-medium text-black mb-3 max-w-3xl leading-relaxed">
+          <p className="text-[18px] lg:text-[20px] xl:text-[22px] font-nunito font-medium text-black mb-3 max-w-3xl leading-relaxed">
             Your reputation is your most valuable asset. Let us help you protect
             and enhance it.
           </p>
@@ -32,7 +32,7 @@ function Reputation(props) {
           {/* Why It's Critical Section */}
           <div className="mb-3 w-full max-w-3xl">
             <h3 className="font-clash font-medium text-[18px] text-black mb-3">
-              Why It’s Critical
+              Why It's Critical
             </h3>
             <ul className="list-disc list-inside space-y-2 text-[16px] font-nunito font-medium text-black">
               <li>

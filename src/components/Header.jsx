@@ -19,10 +19,21 @@ const Header = ({ onContactClick }) => {
     setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
+        // Special handling for About Us section to scroll more
+        if (sectionId === 'about-us') {
+          const elementTop = element.offsetTop;
+          const offsetPosition = elementTop + 100; // Scroll 200px more than the element top
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        } else {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+          });
+        }
       }
     }, 50);
   };
@@ -46,7 +57,7 @@ const Header = ({ onContactClick }) => {
 
   return (
     <>
-      <header className="w-full mb-4 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 md:rounded-full rounded-full relative z-50">
+      <header className="w-full mb-4 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 md:rounded-full rounded-full relative md:z-50 ">
         <div className="relative flex items-center justify-between flex-wrap md:flex-nowrap">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -81,7 +92,7 @@ const Header = ({ onContactClick }) => {
               {/* Services Dropdown */}
               {servicesDropdownOpen && (
                 <div
-                  className="absolute top-full left-0 mt-2 w-[220px] bg-white rounded-2xl border border-gray-200 p-3 shadow-lg"
+                  className="absolute top-full left-0 mt-2 w-[220px] bg-white/30 rounded-2xl border border-gray-200 p-3 shadow-lg"
                   style={{ 
                     zIndex: 99999,
                     pointerEvents: 'auto',
@@ -135,7 +146,7 @@ const Header = ({ onContactClick }) => {
             </div>
             <button
               className="hover:text-green-300 px-2 py-1 text-center cursor-pointer"
-              onClick={() => scrollToSection('youth-program')}
+              // onClick={() => scrollToSection('youth-program')}
             >
               The Spark
             </button>
@@ -244,7 +255,7 @@ const Header = ({ onContactClick }) => {
             <div className="border-b border-white/20 pb-4">
               <button
                 className="text-white text-lg font-medium py-2 hover:text-green-300"
-                onClick={() => scrollToSection('youth-program')}
+                // onClick={() => scrollToSection('youth-program')}
               >
                 The Spark
               </button>

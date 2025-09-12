@@ -2,7 +2,7 @@ import { useState } from "react";
 import businessImage from "../assets/images/contact.svg"; // Using an existing business image
 import call from "../assets/images/call-black.png"
 
-const ContactModal = ({ isOpen, onClose }) => {
+const ContactModal = ({ isOpen, onClose, source = "default" }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -10,6 +10,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     phoneNumber: "",
     organizationName: "",
     consultationType: "phone",
+    serviceType: "",
     message: ""
   });
 
@@ -46,6 +47,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         "Phone Number": formData.phoneNumber,
         "Organization Name": formData.organizationName,
         "Consultation Type": formData.consultationType,
+        "Service Type": formData.serviceType,
         "Message": formData.message,
         "access_key": accessKey
       };
@@ -71,6 +73,7 @@ const ContactModal = ({ isOpen, onClose }) => {
           phoneNumber: "",
           organizationName: "",
           consultationType: "phone",
+          serviceType: "",
           message: ""
         });
         // Close modal after a brief success message
@@ -93,12 +96,12 @@ const ContactModal = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-30 flex items-start justify-center p-4 pt-4 md:pt-40 animate-fadeIn"
+      className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center p-4 animate-fadeIn"
       style={{ zIndex: 999999 }}
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl  max-w-[90%] md:max-w-[60%] w-full max-h-[95vh] md:max-h-[90vh] overflow-y-auto shadow-2xl transform animate-slideUp"
+        className="bg-white rounded-2xl max-w-[90%] md:max-w-[60%] w-full max-h-[95vh] md:max-h-[90vh] overflow-y-auto shadow-2xl transform animate-slideUp contact-modal-container"
         style={{ zIndex: 1000000 }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -294,6 +297,141 @@ const ContactModal = ({ isOpen, onClose }) => {
                   </label>
                 </div>
               </div>
+
+              {/* Service Selection - Only shown for Get Started buttons */}
+              {source === "get-started" && (
+                <div>
+                  <label className="block text-[20px] font-medium mb-3 font-clash">
+                    Select Service?
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Digital Marketing"
+                        checked={formData.serviceType === "Digital Marketing"}
+                        onChange={handleInputChange}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                        formData.serviceType === "Digital Marketing" 
+                          ? "bg-black border-black" 
+                          : "bg-gray-300 border-gray-300"
+                      }`}>
+                        {formData.serviceType === "Digital Marketing" && (
+                          <svg width="10" height="7" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4.5L4.5 8L11 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <span className="ml-2 text-[14px] font-dm">
+                        Digital Marketing
+                      </span>
+                    </label>
+
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Business Credit Growth"
+                        checked={formData.serviceType === "Business Credit Growth"}
+                        onChange={handleInputChange}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                        formData.serviceType === "Business Credit Growth" 
+                          ? "bg-black border-black" 
+                          : "bg-gray-300 border-gray-300"
+                      }`}>
+                        {formData.serviceType === "Business Credit Growth" && (
+                          <svg width="10" height="7" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4.5L4.5 8L11 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <span className="ml-2 text-[14px] font-dm">
+                        Business Credit Growth
+                      </span>
+                    </label>
+
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Reputation Management"
+                        checked={formData.serviceType === "Reputation Management"}
+                        onChange={handleInputChange}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                        formData.serviceType === "Reputation Management" 
+                          ? "bg-black border-black" 
+                          : "bg-gray-300 border-gray-300"
+                      }`}>
+                        {formData.serviceType === "Reputation Management" && (
+                          <svg width="10" height="7" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4.5L4.5 8L11 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <span className="ml-2 text-[14px] font-dm">
+                        Reputation Management
+                      </span>
+                    </label>
+
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Fundraising Growth"
+                        checked={formData.serviceType === "Fundraising Growth"}
+                        onChange={handleInputChange}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                        formData.serviceType === "Fundraising Growth" 
+                          ? "bg-black border-black" 
+                          : "bg-gray-300 border-gray-300"
+                      }`}>
+                        {formData.serviceType === "Fundraising Growth" && (
+                          <svg width="10" height="7" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4.5L4.5 8L11 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <span className="ml-2 text-[14px] font-dm">
+                        Fundraising Growth
+                      </span>
+                    </label>
+
+                    <label className="flex items-center cursor-pointer col-span-1 sm:col-span-2">
+                      <input
+                        type="radio"
+                        name="serviceType"
+                        value="Youth Business Programs"
+                        checked={formData.serviceType === "Youth Business Programs"}
+                        onChange={handleInputChange}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                        formData.serviceType === "Youth Business Programs" 
+                          ? "bg-black border-black" 
+                          : "bg-gray-300 border-gray-300"
+                      }`}>
+                        {formData.serviceType === "Youth Business Programs" && (
+                          <svg width="10" height="7" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4.5L4.5 8L11 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <span className="ml-2 text-[14px] font-dm">
+                        Youth Business Programs
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              )}
 
               {/* Message */}
               <div>

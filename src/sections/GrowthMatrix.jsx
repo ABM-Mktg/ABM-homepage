@@ -6,7 +6,7 @@ function GrowthMatrix(props) {
   return (
     <div
       id="growth-matrix"
-      className="w-full mt-[-30%] md:mt-[-5%] pt-[10%] md:pt-0"
+      className="w-full mt-[-30%] lg:mt-[-5%] pt-[30%] lg:pt-0 growth-matrix-section"
       style={{
         backgroundImage: `url(${bg})`,
         height: "auto", // define your height here
@@ -15,14 +15,14 @@ function GrowthMatrix(props) {
         backgroundPosition: "center",
       }}
     >
-      <div className="pt-[100%] md:pt-[21%] flex flex-col md:items-center px-5">
-        <p className="hidden md:flex font-bold text-[30px] md:text-[52px] font-nunito bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+      <div className="pt-[100%] sm:pt-[40%] lg:pt-[21%] flex flex-col lg:items-center px-5 growth-matrix-heading">
+        <p className="hidden lg:flex font-bold text-[30px] lg:text-[52px] xl:text-[60px] 2xl:text-[72px] font-nunito bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
           The Growth Matrix: Four Forces That
         </p>
-        <p className="hidden md:flex font-bold text-[30px] md:text-[52px] font-nunito bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] -mt-4">
+        <p className="hidden lg:flex font-bold text-[30px] lg:text-[52px] xl:text-[60px] 2xl:text-[72px] font-nunito bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] -mt-4">
           Define Business Success
         </p>
-        <p className="md:hidden font-bold text-[30px] text-center md:text-[52px] font-nunito bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+        <p className="lg:hidden font-bold text-[30px] text-center lg:text-[52px] font-nunito bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
           The Growth Matrix: Four Forces That Define Business Success
         </p>
         <p
@@ -36,20 +36,20 @@ function GrowthMatrix(props) {
           pillars that determine long-term success
         </p>
       </div>
-      <div className="flex flex-col md:flex-row w-[90%] md:w-[85%] w-full mx-auto md:mt-[20px] mb-[40%] md:mb-[8%] items-center justify-center">
-        <div className=" mt-10 md:pl-8 ">
+      <div className="flex flex-col lg:flex-row w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto lg:mt-[20px] mb-[40%] lg:mb-[8%] items-center justify-center">
+        <div className=" mt-10 lg:pl-8 ">
           <img
             src={LeftImage}
             alt="Digital Marketing"
-            className="md:w-[665px] md:h-[517px]"
+            className="lg:w-[665px] lg:h-[517px]"
           />
         </div>
-        <div className="items-start flex flex-col pt-4 px-4">
-          <h2 className="text-center md:text-left font-medium text-[40px] font-clash text-black">
+        <div className="items-start flex flex-col pt-4 px-4 digital-marketing-content">
+          <h2 className="text-center lg:text-left font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black">
             Digital Marketing: Your
-            <br className="hidden md:flex" /> Gateway To Growth
+            <br className="hidden lg:flex" /> Gateway To Growth
           </h2>
-          <p className="text-[16px] font-nunito text-[#1D1B1D] mb-[7px] leading-relaxed font-medium max-w-2xl">
+          <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-nunito text-[#1D1B1D] mb-[7px] leading-relaxed font-medium max-w-2xl">
             Without visibility, even the best businesses remain hidden gems.
             Digital marketing isn't just about being online—it's about being
             found, chosen, and remembered.

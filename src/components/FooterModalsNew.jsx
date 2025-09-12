@@ -382,7 +382,6 @@ const FooterModals = forwardRef((props, ref) => {
             <h2 class="contact-details">Contact Details</h2>
             <h2 class="company"><b>Company:</b> ABM, LLC</h2>
             <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
-            <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
           </div>
         </div>
       `);
@@ -492,7 +491,6 @@ const FooterModals = forwardRef((props, ref) => {
             <h2 class="contact-details">Contact Details</h2>
             <h2 class="company"><b>Company:</b> ABM, LLC</h2>
             <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
-            <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
           </div>
 
           <p class="resp-time"><b>Response Time:</b> We strive to respond to all inquiries within 72 hours /
