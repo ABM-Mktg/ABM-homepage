@@ -34,7 +34,7 @@ function App() {
       <Reputation />
       <FlexibleApproach/>
       <NextStep openContactModal={() => openContactModal("get-started")} />
-      <YouthProgram />
+      {/* <YouthProgram /> */}
       <Footer/>
       <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} source={modalSource} />
     </div>

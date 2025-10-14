@@ -12,13 +12,13 @@ function BusinessCredit(props) {
             className="lg:w-[665px] lg:h-[517px]"
           />
         </div>
-        <div className="items-start flex flex-col pt-4 px-5 lg:px-0">
-          <h2 className="font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black">
+        <div className="items-center lg:items-start flex flex-col pt-4 px-5 lg:px-0">
+          <h2 className="font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black text-center lg:text-left">
             Business Credit: Your 
           <br className="hidden lg:flex"/>
              &nbsp;Growth Foundation
           </h2>
-          <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-nunito text-[#1D1B1D] mb-[24px] leading-relaxed font-medium max-w-2xl">
+          <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-nunito text-[#1D1B1D] mb-[24px] leading-relaxed font-medium max-w-2xl text-center lg:text-left">
             Without strong business credit, growth hits a ceiling. Separating
             personal and business credit is crucial for sustainable scaling.
           </p>

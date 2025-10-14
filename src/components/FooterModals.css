@@ -11,7 +11,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 3000;
+    z-index: 1000001;
     backdrop-filter: blur(5px);
 }
 
@@ -90,6 +90,22 @@
 
 .modal-close:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        padding: 0;
+    }
+    .modal-close img {
+        width: 50px !important;
+        height: 50px !important;
+    }
 }
 
 .modal-content {
@@ -460,9 +476,8 @@
 }
 
 .privacy-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 10px 0;
+    list-style: disc;
+    padding-left: 30px;
 }
 
 .automatically-collected-info-para {
@@ -472,7 +487,6 @@
 
 .privacy-list li {
     position: relative;
-    padding-left: 20px;
     margin-bottom: 8px;
     font-size: 18px;
     font-weight: 400;
@@ -480,23 +494,6 @@
     color: #666666;
 }
 
-.privacy-list li:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 14px;
-    height: 14px;
-    background-image: url('./assets/images/circle-gradient.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-}
-
-.privacy-list li:last-child {
-    margin-bottom: 0;
-}
 
 .your-info-heading {
     font-size: 18px;
@@ -624,7 +621,7 @@
     }
 
     .privacy-list li {
-        padding-left: 20px;
+        padding-left: 15px;
         margin-bottom: 6px;
         font-size: 14px;
         line-height: 20px;

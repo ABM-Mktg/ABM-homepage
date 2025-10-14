@@ -15,13 +15,13 @@ function CustomerRetention(props) {
       }}
     >
       <div className="flex flex-col lg:flex-row lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto items-center justify-center -mt-[35%]  lg:-mt-0 pt-[85%] pb-[0%] lg:pt-[20%] lg:pb-[20%]">
-        <div className="items-start flex flex-col pt-4 px-4">
-          <h2 className="font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black">
+        <div className="items-center lg:items-start flex flex-col pt-4 px-4">
+          <h2 className="font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black text-center lg:text-left">
             Customer Retention
          <br className="hidden lg:flex"/>
             The Profit Multiplier
           </h2>
-          <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-nunito text-[#1D1B1D] mb-[18px] leading-relaxed font-medium max-w-2xl">
+          <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-nunito text-[#1D1B1D] mb-[18px] leading-relaxed font-medium max-w-2xl text-center lg:text-left">
             Acquiring a new customer costs 5-25 times more than retaining an
             existing one. Customer retention is the hidden engine of profitable
             growth.

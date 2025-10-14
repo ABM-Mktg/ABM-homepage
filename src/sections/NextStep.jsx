@@ -8,7 +8,7 @@ import top from "../assets/images/next-step-bottom.png";
 
 function NextStep({ openContactModal }) {
   return (
-    <div className="w-full bg-[#511B29] min-h-[80vh] -mt-4 md:mb-10">
+    <div className="w-full bg-[#511B29] min-h-[80vh] -mt-4">
       <div className="flex flex-col md:items-center px-5">
         <p className="hidden md:flex font-medium text-[30px] md:text-[52px] font-clash text-white">
           Your Next Step
@@ -33,8 +33,8 @@ function NextStep({ openContactModal }) {
           Work With Us For These 3 Reasons
         </p>
         {/* Work With Us Banner */}
-        <div className="mt-12 w-full max-w-6xl mx-auto">
-          <div className="bg-white rounded-[25px] py-2 md:p-3 flex items-center justify-center gap-4">
+        <div className="mt-12 w-full max-w-4xl mx-auto">
+          <div className="bg-white rounded-[25px] py-2 md:p-3 flex items-center justify-center gap-4 border border-2 border-orange-200">
             {/* Brain Icon */}
             <div className="flex-shrink-0 pl-2">
               <img src={step1} alt="Image" />
@@ -47,7 +47,7 @@ function NextStep({ openContactModal }) {
               </h3>
             </div>
           </div>
-          <div className="bg-white rounded-[25px] py-2 md:p-3 flex items-center justify-center gap-4 mt-[15px]">
+          <div className="bg-white rounded-[25px] py-2 md:p-3 flex items-center justify-center gap-4 mt-[15px] border border-2 border-orange-200">
             {/* Brain Icon */}
             <div className="flex-shrink-0 pl-2">
               <img src={step2} alt="Image" />
@@ -61,7 +61,7 @@ function NextStep({ openContactModal }) {
               </h3>
             </div>
           </div>
-          <div className="bg-white rounded-[25px] py-2 md:p-3 flex items-center justify-center gap-4 mt-[15px]">
+          <div className="bg-white rounded-[25px] py-2 md:p-3 flex items-center justify-center gap-4 mt-[15px] border border-2 border-orange-200">
             {/* Brain Icon */}
             <div className="flex-shrink-0 pl-2">
               <img src={step3} alt="Image" />

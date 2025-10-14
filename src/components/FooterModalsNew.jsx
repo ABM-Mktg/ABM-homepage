@@ -2,6 +2,7 @@ import React, { useEffect, useImperativeHandle, forwardRef } from 'react';
 import './FooterModals.css';
 import greenTick from '../assets/images/green-tick.svg';
 import circleGradient from '../assets/images/circle-gradient.svg';
+import close from "../assets/images/close-modal.svg"
 
 const FooterModals = forwardRef((props, ref) => {
 
@@ -24,8 +25,8 @@ const FooterModals = forwardRef((props, ref) => {
         <div class="modal-overlay" id="${id}">
           <div class="modal">
             <div class="close-modal-sticky">
-              <button class="modal-close" id="close${id}">
-                <img src="/src/assets/images/close-modal.svg" alt="close modal">
+              <button class="modal-close" id="close${id}" type="button">
+                <img src="${close}" alt="close modal">
               </button>
             </div>
             <div class="modal-header terms-header">
@@ -375,8 +376,25 @@ const FooterModals = forwardRef((props, ref) => {
               to delete personal information, and the right to opt-out of the sale of personal information.</p>
           </div>
 
+          <div class="terms-section">
+            <h3><span>11.</span> SMS / Opt Out:</h3>
+            <p>ABM respects your privacy. By opting into our SMS messaging service, you agree to the following terms regarding how we handle your data:</p>
+            <ul class="privacy-list">
+              <li>Data collection: we will collect your name, email address, mailing address, and mobile phone number when you sign up for SMS updates. This information will be connected via the website contact form, email, rental agreement, or third-party reservation systems.</li>
+              <li>Data usage: we use your data solely for sending account notifications, marketing, and customer care messages.</li>
+              <li>Data security: we protect your data with secure storage measures to prevent unauthorized access.</li>
+              <li>Data retention: we retain your information as long as you are subscribed to our SMS service. You may request deletion at any time.</li>
+              <li>MESSAGE AND DATA RATES MAY APPLY. Your mobile carrier may charge fees for sending or receiving text messages, especially if you do not have an unlimited texting or data plan.</li>
+              <li>Messages are recurring and message frequency varies.</li>
+              <li>Contact ABM at <a href="mailto:privacy@abmize.com" style="color: #11A9F5; text-decoration: underline;">privacy@abmize.com</a> for HELP or to STOP receiving messages.</li>
+              <li>Opt-out: You can opt out of the SMS list at anytime by texting, emailing, or replying STOP to <a href="mailto:privacy@abmize.com" style="color: #11A9F5; text-decoration: underline;">privacy@abmize.com</a>. After unsubscribing, you will receive a final SMS to confirm you have unsubscribed and we will remove your number from our list within 24 hours.</li>
+              <li>You can send HELP for additional assistance, and you will receive a text including our phone number, email and website. We are here to help you.</li>
+              <li>Non-sharing clause: we do not share your data with third parties for marketing purposes. ABM, LLC will not sell, rent, or share the collected mobile numbers.</li>
+            </ul>
+          </div>
+
           <div class="terms-section" style="border: none; margin-bottom: 0px;">
-            <h3><span>11.</span> Questions About Our Policies?</h3>
+            <h3><span>12.</span> Questions About Our Policies?</h3>
             <p>If you have any questions about these Terms of Use, Privacy Policy, or Cookie Policy, please
               contact us:</p>
             <h2 class="contact-details">Contact Details</h2>

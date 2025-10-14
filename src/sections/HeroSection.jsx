@@ -34,13 +34,13 @@ const HeroSection = () => {
         }}
       >
         <Header onContactClick={openModalFromHeader} />
-        <section className="w-full py-14 pb-5 lg:pb-32 relative">
+        <section className="w-full py-14 pb-5 lg:pb-32 relative mt-10">
           {/* White Opacity Circle */}
           <div className="hidden lg:block absolute top-[54px] right-[600px] w-[100px] h-[100px] bg-white/10 rounded-full z-0 border border-white/20"></div>
 
           {/* Three Headings in Column */}
-          <div className="lg:space-y-4 mb-24 sm:mb-16 lg:mb-20 xl:mb-40 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl relative z-10">
-            <h1 className="h-14 text-[30px] sm:text-[44px] lg:text-[52px] xl:text-[60px] 2xl:text-[72px] font-nunito font-bold text-black leading-tight">
+          <div className="lg:space-y-4 mb-24 sm:mb-16 lg:mb-20 xl:mb-40 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl relative z-10 mx-auto lg:mx-0">
+            <h1 className="h-14 text-[30px] sm:text-[44px] lg:text-[52px] xl:text-[60px] 2xl:text-[72px] font-nunito font-bold text-black leading-tight text-center lg:text-left">
               We Create Guaranteed Business &nbsp;
               <br className="hidden lg:flex"/>
               Success & Growth
@@ -48,12 +48,12 @@ const HeroSection = () => {
           </div>
 
           {/* Content and Images Area */}
-          <div className="flex flex-col lg:flex-row items-start lg:items-end gap-3 lg:gap-[22.5px] lg:mt-6 nest-hub-content">
+          <div className="flex flex-col lg:flex-row items-center lg:items-end gap-3 lg:gap-[22.5px] lg:mt-6 nest-hub-content">
             {/* Left Content Area */}
-            <div className="flex-1">
+            <div className="flex-1 flex flex-col items-center lg:items-start">
               {/* Paragraph */}
               <p
-                className="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] font-nunito rounded mb-4 font-medium nest-hub-paragraph"
+                className="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] font-nunito rounded mb-4 font-medium nest-hub-paragraph text-center lg:text-left"
                 style={{ lineHeight: "1.8" }}
               >
                 In today's competitive marketplace, businesses that thrive don't
@@ -67,11 +67,11 @@ const HeroSection = () => {
               </p>
 
               {/* Button and Small Image */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start lg:justify-between gap-6 sm:gap-20 lg:gap-6 xl:gap-8 nest-hub-button-area">
+              <div className="w-full flex flex-col sm:flex-row items-center sm:items-start  lg:justify-between gap-6 sm:gap-20 lg:gap-6 xl:gap-8 nest-hub-button-area">
                 <button
                   type="button"
                   onClick={openModalFromGetStarted}
-                  className="flex items-center bg-[#68EF78] hover:bg-[#68EF78] text-[#1D1B1D] text-[16px] lg:text-[18px] font-semibold px-4 py-2 lg:px-6 lg:py-2 rounded-full font-nunito max-w-[180px] lg:max-w-[220px] w-full sm:w-auto"
+                  className="flex items-center  bg-[#68EF78] hover:bg-[#68EF78] text-[#1D1B1D] text-[16px] lg:text-[18px] font-semibold px-4 py-2 lg:px-6 lg:py-2 rounded-full font-nunito max-w-[180px] lg:max-w-[220px] w-full sm:w-auto "
                 >
                   <span className="pl-2">Get Started</span>
                   <div className="flex items-center justify-center bg-white rounded-full w-10 h-10 lg:w-12 lg:h-12 ml-3">

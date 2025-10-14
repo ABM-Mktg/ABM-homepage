@@ -121,3 +121,10 @@ html, body, #root {
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
 }
+
+.gradient-border {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #DE5FCB, #DED65F);
+  border-radius: 15px;
+}

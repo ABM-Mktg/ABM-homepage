@@ -88,3 +88,37 @@
     width: 93% !important;
   }
 }
+
+/* Contact Modal Image Control - Simplified */
+.contact-modal-image {
+  display: block; /* Default: show image */
+}
+
+/* Hide image on mobile */
+@media (max-width: 699px) {
+  .contact-modal-image {
+    display: none !important;
+  }
+}
+
+/* Hide image between 700px and 1000px */
+@media (min-width: 700px) and (max-width: 1000px) {
+  .contact-modal-image {
+    display: none !important;
+  }
+  
+  .contact-modal-form {
+    width: 100% !important;
+  }
+}
+
+/* Show image above 1000px */
+@media (min-width: 1001px) {
+  .contact-modal-image {
+    display: block !important;
+  }
+  
+  .contact-modal-form {
+    width: 50% !important;
+  }
+}

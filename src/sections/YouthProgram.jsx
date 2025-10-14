@@ -10,15 +10,15 @@ function YouthProgram() {
     >
 
       <div className="flex flex-col md:flex-row md:w-[85%] w-full mx-auto items-center justify-center pt-[4%]">
-        <div className="items-start flex flex-col pt-4 px-4">
-          <h2 className="font-semibold text-[40px] font-clash bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent">
+        <div className="items-center lg:items-start flex flex-col pt-4 px-4">
+          <h2 className="font-semibold text-[40px] font-clash bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent text-center lg:text-left">
             Youth Program
           </h2>
-          <p className="text-[24px] font-nunito text-[#1D1B1D] mb-[18px] leading-relaxed font-medium max-w-2xl mt-4">
+          <p className="text-[24px] font-nunito text-[#1D1B1D] mb-[18px] leading-relaxed font-medium max-w-2xl mt-4 text-center lg:text-left">
             Youth entrepreneurship and apprenticeship programs that transform
             your ideas into successful businesses and careers
           </p>
-          <p className="text-[20px] font-clash bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent mb-[18px] leading-relaxed font-semibold max-w-2xl mt-4">
+          <p className="text-[20px] font-clash bg-gradient-to-r from-[#B84F6A] to-[#511B29] bg-clip-text text-transparent mb-[18px] leading-relaxed font-semibold max-w-2xl mt-4 text-center lg:text-left">
             Do you know talented youth that can benefit from this program?
           </p>
           <a

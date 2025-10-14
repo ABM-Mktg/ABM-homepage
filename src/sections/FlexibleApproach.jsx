@@ -31,12 +31,12 @@ function FlexibleApproach(props) {
         </p>
       </div>
       <div className="flex flex-col-reverse lg:flex-row lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto items-center justify-center lg:-mt-0 pt-[1%] lg:pt-[1%] lg:pb-[1%]">
-        <div className="items-start flex flex-col pt-2 px-4 lg:px-0 order-2 lg:order-1 w-full sm:w-auto">
-          <h2 className="font-medium text-[32px] sm:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black">#01</h2>
-          <h2 className="font-medium text-[32px] sm:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black mb-2 -mt-1">
-            Comprehensive Growth Plan
+        <div className="items-center lg:items-start flex flex-col pt-2 px-4 lg:px-0 order-2 lg:order-1 w-full sm:w-auto">
+          <h2 className="font-medium text-[32px] sm:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black text-center lg:text-left">#01</h2>
+          <h2 className="font-medium text-[32px] sm:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] font-clash text-black mb-2 -mt-1 text-center lg:text-left">
+            Integrated Growth Plan
           </h2>
-          <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-nunito text-[#1D1B1D] mb-[18px] leading-relaxed font-medium max-w-2xl">
+          <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-nunito text-[#1D1B1D] mb-[18px] leading-relaxed font-medium max-w-2xl text-center lg:text-left">
             We can help you implement and optimize all four pillars
             simultaneously, creating a robust foundation for sustainable growth.
             This integrated approach ensures all elements work together
@@ -51,7 +51,7 @@ function FlexibleApproach(props) {
           />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto items-center justify-center pt-[1%] lg:pt-[3%] lg:pb-[17%] pb-[10%]">
+      <div id="targeted-solutions" className="flex flex-col lg:flex-row lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto items-center justify-center pt-[1%] lg:pt-[3%] lg:pb-[17%] pb-[10%]">
         <div className="hidden sm:block px-4 sm:px-6 lg:px-0 order-2 lg:order-1">
           <img
             src={LeftImage}
@@ -59,19 +59,19 @@ function FlexibleApproach(props) {
             className="w-full lg:w-[591px] lg:h-[559px] mx-auto"
           />
         </div>
-        <div className="flex flex-col px-4 sm:px-6 lg:pl-20 lg:px-0 order-1 lg:order-2 mb-6 lg:mb-0 w-full sm:w-auto">
+        <div className="flex flex-col px-4 sm:px-6 lg:pl-20 lg:px-0 order-1 lg:order-2 mb-6 lg:mb-0 w-full sm:w-auto items-center lg:items-start">
           {/* Headings */}
-          <h1 className="font-clash font-medium text-[32px] sm:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] text-black leading-tight mb-3">
+          <h1 className="font-clash font-medium text-[32px] sm:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] text-black leading-tight mb-3 text-center lg:text-left">
             #02
             <br />
             Targeted Solutions
           </h1>
 
           {/* Paragraph */}
-          <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-nunito font-medium text-black mb-3 max-w-3xl leading-relaxed">
-            Need to focus on one specific hurdle?  We'll create a customized
+          <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-nunito font-medium text-black mb-3 max-w-3xl leading-relaxed text-center lg:text-left">
+            Need to focus on one specific hurdle?  We'll create a customized
             solution that addresses your most pressing challenges while keeping
-            the bigger picture in mind.  Some specific areas of impact include:
+            the bigger picture in mind.  Some specific areas of impact include:
           </p>
 
           {/* Horizontal line */}

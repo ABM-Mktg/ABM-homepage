@@ -10,7 +10,11 @@ function AboutUs(props) {
         {/* Main content area with image and text overlay */}
         <div className="relative">
           {/* Background image positioned on the right */}
-          <div className="absolute right-0 top-0 w-full sm:w-[60%] md:w-[50%] h-[500px] sm:h-[600px] md:h-[688px]">
+               {/* <h2 className="text-2xl sm:text-3xl md:text-[40px] font-medium text-[#1D1B1D] font-clash mb-0 text-center md:text-left">
+            About Us
+          </h2> */}
+          
+          <div className="absolute right-0 top-[50px] w-full sm:w-[60%] md:w-[50%] h-[500px] sm:h-[600px] md:h-[688px]">
             <img
               src={aboutImage}
               alt="Team celebrating"
@@ -28,12 +32,12 @@ function AboutUs(props) {
             <div className="hidden md:flex absolute top-16 sm:top-20 left-0 w-[50%] sm:w-[40%] md:w-[30%] h-[88%] backdrop-blur-sm bg-white/10"></div>
           </div>
           {/* About Us heading */}
-          <h2 className="text-2xl sm:text-3xl md:text-[40px] font-medium text-[#1D1B1D] font-clash mb-0">
+          <h2 className="text-2xl sm:text-3xl md:text-[40px] font-medium text-[#1D1B1D] font-clash mb-0 text-center md:text-left">
             About Us
           </h2>
           {/* Text overlay with light blue background */}
-          <div className="relative z-10 w-full w-[85%] md:w-[65%] bg-[#5FBEDE]/70 p-4 sm:p-6 md:p-8   lg:h-[608px] top-60 md:top-[44px] sm:top-11">
-            <div className="space-y-4 text-[#555555]">
+          <div className="relative z-10 w-full w-[85%] md:w-[65%] bg-[#5FBEDE]/70 p-4 sm:p-6 md:p-8   lg:h-[608px] top-60 md:top-[44px] sm:top-11 mx-auto md:mx-0">
+            <div className="space-y-4 text-[#555555] text-center md:text-left">
               <p className="text-[16px] leading-relaxed">
                 Born from Fortune 500 expertise, reimagined for entrepreneurial
                 visionaries. At the heart of ABM lies a small, elite team of

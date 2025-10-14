@@ -12,16 +12,16 @@ function Reputation(props) {
             className="lg:w-[665px] lg:h-[517px]"
           />
         </div>
-        <div className="flex flex-col px-4">
+        <div className="flex flex-col px-4 items-center lg:items-start">
           {/* Headings */}
-          <h1 className="font-clash font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] text-black leading-tight mb-3">
+          <h1 className="font-clash font-medium text-[40px] xl:text-[48px] 2xl:text-[56px] text-black leading-tight mb-3 text-center lg:text-left">
             Reputation Management: Your
             <br />
             Market Value Driver
           </h1>
 
           {/* Paragraph */}
-          <p className="text-[18px] lg:text-[20px] xl:text-[22px] font-nunito font-medium text-black mb-3 max-w-3xl leading-relaxed">
+          <p className="text-[18px] lg:text-[20px] xl:text-[22px] font-nunito font-medium text-black mb-3 max-w-3xl leading-relaxed text-center lg:text-left">
             Your reputation is your most valuable asset. Let us help you protect
             and enhance it.
           </p>
