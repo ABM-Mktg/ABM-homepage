@@ -48,7 +48,7 @@ const HeroSection = () => {
           </div>
 
           {/* Content and Images Area */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-end gap-3 lg:gap-[22.5px] lg:mt-6 nest-hub-content">
+          <div className="flex flex-col xl:flex-row items-center lg:items-end gap-3 lg:gap-[22.5px] lg:mt-6 nest-hub-content">
             {/* Left Content Area */}
             <div className="flex-1 flex flex-col items-center lg:items-start">
               {/* Paragraph */}

@@ -3,7 +3,7 @@ import LeftImage from "../assets/images/reputation-1.png";
 
 function Reputation(props) {
   return (
-    <div id="reputation-management" className="w-full lg:-mt-[6.8%] bg-[#F3C387] min-h-[70vh] lg:-mt-[35%] -mt-[39%] reputation-section">
+    <div id="reputation-management" className="w-full lg:-mt-[8.8%] bg-[#F3C387] min-h-[70vh] lg:-mt-[35%] -mt-[39%] reputation-section">
       <div className="flex flex-col lg:flex-row lg:w-[85%] xl:w-[80%] 2xl:w-[75%] w-full mx-auto items-center justify-center pt-[3%] lg:pt-[5%]">
         <div className="">
           <img
