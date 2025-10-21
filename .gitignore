@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Dependency directories
+bower_components/
+
+# Cache
+.cache/
+*.cache
+vite.cache/
+coverage/
+
+# Optional lock files (uncomment the one you use)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# TypeScript build files
+*.tsbuildinfo
+
+# Misc
+*.tgz
+*.zip
+ 
