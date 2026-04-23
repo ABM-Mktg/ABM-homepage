@@ -1005,13 +1005,13 @@ function addModalCSS() {
 .contact-details {
   margin: 12px 0px 14px 0px;
     font-family: "DM Sans", sans-serif !important;
-  font-size: 22px !important;
+  font-size: 16px !important;
   font-weight: 600;
-  line-height: 22px !important;
+  line-height: 20px !important;
 }
 
 .company {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 18px !important;
     font-family: "DM Sans", sans-serif !important;
   font-weight: 400;
@@ -1019,14 +1019,14 @@ function addModalCSS() {
 
 .email {
   margin-top: 14px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 18px;
     font-family: "DM Sans", sans-serif !important;
   font-weight: 400;
 }
 
 .resp-time {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
   font-family: "DM Sans", sans-serif !important;
 }
