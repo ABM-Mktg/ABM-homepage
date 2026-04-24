@@ -117,7 +117,7 @@ function openTermsModal() {
 
                 <div class="terms-section">
                     <h3><span>8.</span> Limitation Of Liability</h3>
-                    <p>In no event shall ABM, LLC nor its directors, employees, partners, agents, suppliers, or
+                    <p>In no event shall Applied Branding &amp; Marketing, LLC nor its directors, employees, partners, agents, suppliers, or
                         affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages,
                         including without limitation, loss of profits, data, use, goodwill, or other intangible losses,
                         resulting from your use of the service.</p>
@@ -148,7 +148,7 @@ function openTermsModal() {
                     <p>If you have any questions about these Terms of Use, Privacy Policy, or Cookie Policy, please
                         contact us:</p>
                     <h2 class="contact-details">Contact Details</h2>
-                    <h2 class="company"><b>Company:</b> ABM, LLC</h2>
+                    <h2 class="company"><b>Company:</b> Applied Branding &amp; Marketing, LLC</h2>
                     <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
                       <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
                 </div>
@@ -310,7 +310,7 @@ function openPrivacyModal() {
                     <p>If you have any questions about these Terms of Use, Privacy Policy, or Cookie Policy, please
                         contact us:</p>
                     <h2 class="contact-details">Contact Details</h2>
-                    <h2 class="company"><b>Company:</b> ABM, LLC</h2>
+                    <h2 class="company"><b>Company:</b> Applied Branding &amp; Marketing, LLC</h2>
                     <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
                       <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
                 </div>
@@ -412,7 +412,7 @@ function openCookiesModal() {
                     <p>If you have any questions about these Terms of Use, Privacy Policy, or Cookie Policy, please
                         contact us:</p>
                     <h2 class="contact-details">Contact Details</h2>
-                    <h2 class="company"><b>Company:</b> ABM, LLC</h2>
+                    <h2 class="company"><b>Company:</b> Applied Branding &amp; Marketing, LLC</h2>
                     <h2 class="email"><b>Email:</b> legal@abmize.com</h2>
                       <h2 class="email"><b>Call Us:</b> <a href="tel:8777217447" class="call-me">(877) 721-7447</a></h2>
                 </div>
