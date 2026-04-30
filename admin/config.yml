@@ -5,8 +5,6 @@ backend:
 media_folder: "assets/blog"
 public_folder: "/assets/blog"
 
-local_backend:
-  url: http://localhost:8081/api/v1
 
 collections:
   - name: "categories"

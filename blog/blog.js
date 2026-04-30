@@ -111,10 +111,7 @@
   function isPublishedForListing(post) {
     if (!post) return false;
     if (post.status !== "Published") return false;
-    var publishDate = new Date(post.date || "");
-    if (Number.isNaN(publishDate.getTime())) return false;
-    var now = new Date();
-    return publishDate.getTime() <= now.getTime();
+    return true;
   }
 
   function normalizePost(post) {
@@ -123,31 +120,73 @@
     return post;
   }
 
+  async function loadApiPosts() {
+    var endpoints = ["/.netlify/functions/blog-posts", "/api/blog-posts"];
+    for (var i = 0; i < endpoints.length; i += 1) {
+      try {
+        var response = await fetch(endpoints[i], { cache: "no-store" });
+        if (!response.ok) continue;
+        var payload = await response.json();
+        if (!Array.isArray(payload)) continue;
+        var posts = payload
+          .map(function (post) {
+            return normalizePost(post);
+          })
+          .filter(Boolean);
+        if (posts.length) return posts;
+      } catch (error) {
+        continue;
+      }
+    }
+    return [];
+  }
+
+  async function loadManifestPostFiles() {
+    try {
+      var manifestResponse = await fetch("/content/blog/index.json", { cache: "no-store" });
+      if (!manifestResponse.ok) return [];
+      var manifest = await manifestResponse.json();
+      if (!Array.isArray(manifest)) return [];
+      return manifest
+        .filter(function (fileName) {
+          return typeof fileName === "string" && /\.json$/i.test(fileName);
+        })
+        .map(function (fileName) {
+          return fileName.split("/").pop();
+        });
+    } catch (error) {
+      return [];
+    }
+  }
+
   async function loadFolderPosts() {
     try {
-      var listingResponse = await fetch("/content/blog/", { cache: "no-store" });
-      if (!listingResponse.ok) return [];
-      var html = await listingResponse.text();
-      var fileNames = [];
-      var regex = /href\s*=\s*["']([^"']+\.json)["']/gi;
-      var match;
-      while ((match = regex.exec(html)) !== null) {
-        if (match[1]) fileNames.push(match[1]);
-      }
+      var fileNames = await loadManifestPostFiles();
 
-      if (!fileNames.length && typeof DOMParser !== "undefined") {
-        var doc = new DOMParser().parseFromString(html, "text/html");
-        var links = Array.prototype.slice.call(doc.querySelectorAll("a[href$='.json']"));
-        fileNames = links.map(function (link) {
-          return link.getAttribute("href");
-        });
-      }
+      if (!fileNames.length) {
+        var listingResponse = await fetch("/content/blog/", { cache: "no-store" });
+        if (!listingResponse.ok) return [];
+        var html = await listingResponse.text();
+        var regex = /href\s*=\s*["']([^"']+\.json)["']/gi;
+        var match;
+        while ((match = regex.exec(html)) !== null) {
+          if (match[1]) fileNames.push(match[1]);
+        }
 
-      fileNames = fileNames
-        .filter(Boolean)
-        .map(function (fileName) {
-          return String(fileName).split("/").pop();
-        });
+        if (!fileNames.length && typeof DOMParser !== "undefined") {
+          var doc = new DOMParser().parseFromString(html, "text/html");
+          var links = Array.prototype.slice.call(doc.querySelectorAll("a[href$='.json']"));
+          fileNames = links.map(function (link) {
+            return link.getAttribute("href");
+          });
+        }
+
+        fileNames = fileNames
+          .filter(Boolean)
+          .map(function (fileName) {
+            return String(fileName).split("/").pop();
+          });
+      }
 
       if (!fileNames.length) return [];
 
@@ -174,7 +213,8 @@
 
   async function loadPosts() {
     var bySlug = {};
-    var folderPosts = await loadFolderPosts();
+    var apiPosts = await loadApiPosts();
+    var folderPosts = apiPosts.length ? apiPosts : await loadFolderPosts();
 
     folderPosts.forEach(function (post) {
       if (!post || !post.slug) return;
