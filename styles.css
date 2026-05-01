@@ -1873,4 +1873,48 @@ textarea:focus {
   .legal-main {
     padding: 100px 20px 64px;
   }
+}
+
+/* Private Tally form pages (/apply, /pilot, /engage-inquiry) */
+.private-form-main {
+  padding: 120px 1.25rem 4rem;
+  min-height: 55vh;
+}
+
+.private-form-inner {
+  width: 100%;
+  max-width: min(100%, 960px);
+  margin: 0 auto;
+}
+
+.private-form-heading {
+  margin: clamp(3rem, 8vw, 5.5rem) 0 1.5rem;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-2d2d2d);
+  line-height: 1.2;
+}
+
+.private-tally-wrap {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--cbdr);
+}
+
+.private-tally-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 500px;
+  border: 0;
+  vertical-align: top;
+}
+
+@media (max-width: 600px) {
+  .private-form-main {
+    padding: 100px 1rem 3rem;
+  }
 } 
