@@ -1,0 +1,19 @@
+[functions]
+  directory = "netlify/functions"
+  included_files = ["content/blog/**/*.json"]
+
+# Avoid long-lived cached HTML/CSS so design updates show up after deploys.
+[[headers]]
+  for = "/**/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/blog/blog.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

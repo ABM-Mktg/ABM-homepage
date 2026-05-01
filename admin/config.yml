@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/blog"
+public_folder: "/assets/blog"
+
+
+collections:
+  - name: "categories"
+    label: "Categories"
+    label_singular: "Category"
+    folder: "content/categories"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    identifier_field: "name"
+    fields:
+      - { label: "Category Name", name: "name", widget: "string", required: true }
+
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Post"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}-{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
+    extension: "json"
+    format: "json"
+    identifier_field: "title"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Publish Date", name: "date", widget: "datetime", required: true }
+      - { label: "Author", name: "author", widget: "string", required: true, default: "SIT™ Team" }
+      - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "150-200 chars" }
+      - { label: "Body Content", name: "content", widget: "markdown", required: true }
+      - { label: "SEO Title", name: "seo_title", widget: "string", required: true, hint: "Max 60 chars" }
+      - { label: "Meta Description", name: "meta_description", widget: "text", required: true, hint: "Max 155 chars" }
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        required: true
+        collection: "categories"
+        search_fields: ["name"]
+        value_field: "name"
+        display_fields: ["name"]
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        required: true
+        default: "Draft"
+        options: ["Draft", "Published"]

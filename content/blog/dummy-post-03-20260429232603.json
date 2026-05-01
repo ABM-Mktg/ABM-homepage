@@ -1,0 +1,13 @@
+{
+  "title": "Dummy Post 03",
+  "date": "2026-04-29T10:03:00.000+05:00",
+  "author": "SIT™ Team",
+  "image": "/assets/blog/no-image-placeholder.svg",
+  "excerpt": "Dummy excerpt for post 03 to test content workflows and listing behavior.",
+  "content": "## Dummy Post 03\n\nThis is placeholder content for testing the blog pipeline.\n\n- Draft workflow validation\n- Category mapping check\n- CMS editability check",
+  "seo_title": "Dummy Post 03 | SIT Insights",
+  "meta_description": "Dummy meta description for post 03 used for CMS testing.",
+  "category": "Territory Strategy",
+  "status": "Published",
+  "slug": "dummy-post-03"
+}
