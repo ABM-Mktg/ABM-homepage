@@ -10,21 +10,21 @@
       '      <div class="contact-brand">' +
       '        <img src="/assets/SIT v2 light/headerlogo.png" alt="SIT Strategic Industry Territory" />' +
       "      </div>" +
-      "      <h3>Contact Us</h3>" +
+      "      <h3>Let’s Get You Connected</h3>" +
       '      <button class="contact-close" type="button" aria-label="Close contact modal">✕</button>' +
       "    </div>" +
       '    <div class="contact-body">' +
       '      <div class="contact-form">' +
-      '        <p class="contact-route-intro">Select the pathway that matches your request and continue to the dedicated inquiry page.</p>' +
+      '        <p class="contact-route-intro">Choose the option that best fits your goals and continue to the appropriate inquiry.</p>' +
       '        <div class="contact-route-list">' +
       '          <a class="contact-route-link" href="/apply">' +
-      '            <span class="contact-route-title">GroundForce Territory Review</span>' +
+      '            <span class="contact-route-title">Explore Territory Availability</span>' +
       "          </a>" +
       '          <a class="contact-route-link" href="/pilot">' +
-      '            <span class="contact-route-title">Visibility Pilot Inquiry</span>' +
+      '            <span class="contact-route-title">Start a Visibility Pilot</span>' +
       "          </a>" +
       '          <a class="contact-route-link" href="/engage-inquiry">' +
-      '            <span class="contact-route-title">Engage Brand Activation</span>' +
+      '            <span class="contact-route-title">Activate Your Brand Presence</span>' +
       "          </a>" +
       "        </div>" +
       "      </div>" +

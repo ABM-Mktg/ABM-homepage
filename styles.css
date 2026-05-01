@@ -1198,7 +1198,7 @@ a[data-tally-placeholder] {
 }
 
 .contact-header h3 {
-  font-size: 1.4rem;
+  font-size: clamp(1.65rem, 1.2vw + 1.3rem, 2rem);
   font-weight: 800;
   margin: 0;
   color: var(--tx);
@@ -1271,24 +1271,32 @@ a[data-tally-placeholder] {
 }
 
 .contact-route-intro {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
-  color: var(--tx2);
-  margin-bottom: 16px;
+  color: rgba(45, 45, 45, 0.92);
+  margin-bottom: 26px;
+}
+
+[data-theme="dark"] .contact-route-intro {
+  color: rgba(237, 243, 255, 0.9);
 }
 
 .contact-route-list {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .contact-route-link {
   display: block;
   border: 1px solid var(--cbdr);
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 16px 20px;
   background: var(--card);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 22px rgba(11, 14, 13, 0.08);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .contact-route-link:hover {
@@ -1300,7 +1308,8 @@ a[data-tally-placeholder] {
 .contact-route-title {
   display: block;
   color: var(--color-2d2d2d);
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 800;
   line-height: 1.35;
 }
 
