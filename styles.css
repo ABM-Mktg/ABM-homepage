@@ -1270,6 +1270,47 @@ a[data-tally-placeholder] {
   font-weight: 600;
 }
 
+.contact-route-intro {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--tx2);
+  margin-bottom: 16px;
+}
+
+.contact-route-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-route-link {
+  display: block;
+  border: 1px solid var(--cbdr);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: var(--card);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-route-link:hover {
+  border-color: var(--bdA);
+  box-shadow: 0 6px 24px var(--glow);
+  transform: translateY(-1px);
+}
+
+.contact-route-title {
+  display: block;
+  color: var(--color-2d2d2d);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.contact-route-path {
+  display: block;
+  margin-top: 4px;
+  color: var(--tx2);
+  font-size: 0.85rem;
+}
+
 .contact-tally-placeholder {
   padding: 40px 20px;
   text-align: center;

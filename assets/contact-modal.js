@@ -1,10 +1,4 @@
 (function () {
-  var TALLY_FORM_ID = "FORM_ID_CONTACT_US";
-  var TALLY_SRC =
-    "https://tally.so/r/" +
-    TALLY_FORM_ID +
-    "?source=Website_Contact&alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1";
-
   function ensureModal() {
     if (document.getElementById("cMod")) return;
 
@@ -21,11 +15,17 @@
       "    </div>" +
       '    <div class="contact-body">' +
       '      <div class="contact-form">' +
-      "        <!-- Tally Form 4 (Contact Us): replace FORM_ID_CONTACT_US in assets/contact-modal.js with the real /r/... id from Tally -> Share -> Embed. -->" +
-      '        <div class="private-tally-wrap">' +
-      '          <iframe data-tally-src="' +
-      TALLY_SRC +
-      '" loading="lazy" width="100%" height="500" frameborder="0" title="Contact us"></iframe>' +
+      '        <p class="contact-route-intro">Select the pathway that matches your request and continue to the dedicated inquiry page.</p>' +
+      '        <div class="contact-route-list">' +
+      '          <a class="contact-route-link" href="/apply">' +
+      '            <span class="contact-route-title">GroundForce Territory Review</span>' +
+      "          </a>" +
+      '          <a class="contact-route-link" href="/pilot">' +
+      '            <span class="contact-route-title">Visibility Pilot Inquiry</span>' +
+      "          </a>" +
+      '          <a class="contact-route-link" href="/engage-inquiry">' +
+      '            <span class="contact-route-title">Engage Brand Activation</span>' +
+      "          </a>" +
       "        </div>" +
       "      </div>" +
       '      <div class="contact-photo">' +
