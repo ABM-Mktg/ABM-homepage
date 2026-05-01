@@ -1595,6 +1595,36 @@ textarea:focus {
   .radio-grid {
     grid-template-columns: 1fr;
   }
+
+  .contact-header {
+    padding: 16px 52px 12px 18px;
+    text-align: left;
+  }
+
+  .contact-brand {
+    display: block;
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .contact-brand img {
+    height: 20px;
+  }
+
+  .contact-header h3 {
+    font-size: clamp(1.3rem, 4.8vw, 1.7rem);
+    line-height: 1.2;
+    max-width: 18ch;
+  }
+
+  .contact-close {
+    right: 14px;
+  }
+
+  .contact-form {
+    padding: 18px;
+  }
 }
 
 /* ANIM */
