@@ -2005,7 +2005,10 @@ textarea:focus {
   border-radius: 12px;
   overflow: hidden;
   background: var(--card);
-  border: 1px solid var(--cbdr);
+}
+
+.apply-tally-wrap {
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 .private-tally-wrap iframe {
