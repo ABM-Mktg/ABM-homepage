@@ -2009,6 +2009,7 @@ textarea:focus {
 
 .apply-tally-wrap {
   padding: clamp(1rem, 3vw, 2rem);
+  background: #ffffff;
 }
 
 .private-tally-wrap iframe {
@@ -2017,6 +2018,10 @@ textarea:focus {
   min-height: 500px;
   border: 0;
   vertical-align: top;
+}
+
+.apply-tally-wrap iframe {
+  background: #ffffff;
 }
 
 @media (max-width: 600px) {
