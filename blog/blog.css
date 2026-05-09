@@ -41,6 +41,9 @@ html[data-theme="light"] body.blog-page {
 .blog-intro {
   max-width: 720px;
   margin-top: 8px;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .blog-grid {

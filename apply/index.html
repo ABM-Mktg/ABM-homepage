@@ -86,15 +86,16 @@
       <div class="ctn">
         <div class="private-form-inner">
           <h1 class="private-form-heading">Strategic Industry Territory Review</h1>
-          <div class="private-tally-wrap">
-            <!-- data-tally-src pattern: https://[CUSTOMDOMAIN]/r/[FORMID]?source=[SOURCE]&… — replace host and /r/… id from Tally. -->
+          <div class="private-tally-wrap apply-tally-wrap">
             <iframe
-              data-tally-src="https://tally.so/r/FORM_ID_APPLY?source=Strategic_Industry_Territory_Review&alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              data-tally-src="https://tally.so/embed/0QoPOA?source=Website_Direct&alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               loading="lazy"
               width="100%"
-              height="500"
+              height="1"
               frameborder="0"
-              title="Strategic Industry Territory Review form"
+              marginheight="0"
+              marginwidth="0"
+              title="SIT GroundForce Territory Review"
             ></iframe>
           </div>
         </div>
@@ -128,35 +129,33 @@
   </div>
 </footer>
 
-    <div class="cm" id="cMod">
-      <div class="contact-card">
-        <div class="contact-header">
-          <div class="contact-brand">
-            <img
-              src="/assets/SIT v2 light/headerlogo.png"
-              alt="SIT Strategic Industry Territory"
-            />
-          </div>
-          <h3>Contact Us</h3>
-          <button class="contact-close" onclick="cC()">✕</button>
-        </div>
-
-        <div class="contact-body">
-          <div class="contact-form">
-            <div class="contact-tally-placeholder">
-              <p class="tally-title">Get In Touch</p>
-              <p class="tally-note">Contact form loading shortly.</p>
-            </div>
-          </div>
-
-          <div class="contact-photo">
-            <img src="/assets/img/Contact Us.jpg" alt="SIT field representative" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <script src="/assets/contact-modal.js"></script>
 
     <script>
+      (function () {
+        var d = document,
+          w = "https://tally.so/widgets/embed.js",
+          v = function () {
+            if (typeof Tally !== "undefined") {
+              Tally.loadEmbeds();
+            } else {
+              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) {
+                e.src = e.dataset.tallySrc;
+              });
+            }
+          };
+
+        if (typeof Tally !== "undefined") {
+          v();
+        } else if (d.querySelector('script[src="' + w + '"]') == null) {
+          var s = d.createElement("script");
+          s.src = w;
+          s.onload = v;
+          s.onerror = v;
+          d.body.appendChild(s);
+        }
+      })();
+
       function tT() {
         var h = document.documentElement,
           n = h.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -179,32 +178,6 @@
       function cM() {
         document.getElementById("mM").classList.remove("on");
       }
-      function oC() {
-        document.getElementById("cMod").classList.add("on");
-        document.body.style.overflow = "hidden";
-      }
-      function cC() {
-        document.getElementById("cMod").classList.remove("on");
-        document.body.style.overflow = "";
-      }
-      document.getElementById("cMod").addEventListener("click", function (e) {
-        if (e.target === this) cC();
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") cC();
-      });
-      document.addEventListener(
-        "click",
-        function (e) {
-          var a = e.target.closest("a[data-tally-placeholder]");
-          if (a) {
-            e.preventDefault();
-            cM();
-            oC();
-          }
-        },
-        true,
-      );
     </script>
   </body>
 </html>

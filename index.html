@@ -94,10 +94,8 @@
           </p>
           <div class="bgrp">
             <a
-              href="#"
+              href="/pilot"
               class="btn bp"
-              data-tally-placeholder
-              title="Tally form — URL coming soon"
               >Request Partnership Overview
               <svg width="10" height="10" viewBox="0 0 11 11" fill="none">
                 <path
@@ -108,10 +106,8 @@
                   stroke-linejoin="round"
                 /></svg></a
             ><a
-              href="#"
+              href="/apply"
               class="btn bs"
-              data-tally-placeholder
-              title="Tally form — URL coming soon"
               >See Territory Availability
               <svg width="10" height="10" viewBox="0 0 11 11" fill="none">
                 <path
@@ -183,10 +179,8 @@
         </p>
         <div class="bgrp">
           <a
-            href="#"
+            href="/apply"
             class="btn bp"
-            data-tally-placeholder
-            title="Tally form — URL coming soon"
             >Check Territory Availability
             <svg width="10" height="10" viewBox="0 0 11 11" fill="none">
               <path
@@ -197,10 +191,8 @@
                 stroke-linejoin="round"
               /></svg></a
           ><a
-            href="#"
+            href="/engage-inquiry/"
             class="btn bs"
-            data-tally-placeholder
-            title="Tally form — URL coming soon"
             >Explore Engagement Programs
             <svg width="10" height="10" viewBox="0 0 11 11" fill="none">
               <path
@@ -380,10 +372,8 @@
               </li>
             </ul>
             <a
-              href="#"
+              href="/apply"
               class="btn bp"
-              data-tally-placeholder
-              title="Tally form — URL coming soon"
               >Check Territory Availability
               <svg width="10" height="10" viewBox="0 0 11 11" fill="none">
                 <path
@@ -494,10 +484,8 @@
               </li>
             </ul>
             <a
-              href="#"
+              href="/engage-inquiry/"
               class="btn bp"
-              data-tally-placeholder
-              title="Tally form — URL coming soon"
               >Request Engagement Overview
               <svg width="10" height="10" viewBox="0 0 11 11" fill="none">
                 <path
@@ -589,10 +577,8 @@
         </p>
         <div class="bgrp btn3">
           <a
-            href="#"
+            href="/pilot"
             class="btn bp"
-            data-tally-placeholder
-            title="Tally form — URL coming soon"
             >Request Partnership Overview
             <svg width="10" height="10" viewBox="0 0 11 11" fill="none">
               <path
@@ -634,42 +620,7 @@
   </div>
 </footer>
 
-    <div class="cm" id="cMod">
-  <div class="contact-card">
-    <div class="contact-header">
-      <div class="contact-brand">
-        <img
-          src="/assets/SIT v2 light/headerlogo.png"
-          alt="SIT Strategic Industry Territory"
-        />
-      </div>
-      <h3>Contact Us</h3>
-      <button class="contact-close" onclick="cC()">✕</button>
-    </div>
-
-    <div class="contact-body">
-      <!-- LEFT FORM -->
-      <div class="contact-form">
-        <div class="contact-tally-placeholder">
-          <p class="tally-title">Get In Touch</p>
-          <p class="tally-note">Contact form loading shortly.</p>
-          <!-- <p class="tally-call">
-            Or call us directly: <strong>(877) 721-7447</strong>
-          </p> -->
-          <!-- TALLY EMBED: Replace this comment with iframe when ready
-          <iframe data-tally-src="https://CUSTOMDOMAIN/r/FORMID?source=Website_Contact&alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-            loading="lazy" width="100%" height="500" frameborder="0"></iframe>
-          -->
-        </div>
-      </div>
-
-      <!-- RIGHT IMAGE -->
-      <div class="contact-photo">
-        <img src="assets/img/Contact Us.jpg" alt="SIT field representative" />
-      </div>
-    </div>
-  </div>
-</div>
+    <script src="/assets/contact-modal.js"></script>
 
     <script>
       function tT() {
@@ -694,32 +645,6 @@
       function cM() {
         document.getElementById("mM").classList.remove("on");
       }
-      function oC() {
-        document.getElementById("cMod").classList.add("on");
-        document.body.style.overflow = "hidden";
-      }
-      function cC() {
-        document.getElementById("cMod").classList.remove("on");
-        document.body.style.overflow = "";
-      }
-      document.getElementById("cMod").addEventListener("click", function (e) {
-        if (e.target === this) cC();
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") cC();
-      });
-      document.addEventListener(
-        "click",
-        function (e) {
-          var a = e.target.closest("a[data-tally-placeholder]");
-          if (a) {
-            e.preventDefault();
-            cM();
-            oC();
-          }
-        },
-        true,
-      );
       var ob = new IntersectionObserver(
         function (es) {
           es.forEach(function (e) {
