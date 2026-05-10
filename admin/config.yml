@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: sit-home
 
 media_folder: "assets/blog"
 public_folder: "/assets/blog"
