@@ -35,6 +35,9 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "150-200 chars" }
       - { label: "Body Content", name: "content", widget: "markdown", required: true }
+      - { label: "CTA Text", name: "cta_text", widget: "string", required: false, default: "Ready to explore territory availability?" }
+      - { label: "CTA Button Label", name: "cta_button_text", widget: "string", required: false, default: "Explore Availability" }
+      - { label: "CTA Link", name: "cta_link", widget: "string", required: false, default: "/apply", hint: "Use a relative path like /apply or full URL like https://example.com" }
       - { label: "SEO Title", name: "seo_title", widget: "string", required: true, hint: "Max 60 chars" }
       - { label: "Meta Description", name: "meta_description", widget: "text", required: true, hint: "Max 155 chars" }
       - label: "Category"

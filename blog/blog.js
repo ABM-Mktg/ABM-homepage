@@ -108,6 +108,11 @@
     return String(category);
   }
 
+  function isExternalUrl(url) {
+    if (!url || typeof url !== "string") return false;
+    return /^https?:\/\//i.test(url);
+  }
+
   function isPublishedForListing(post) {
     if (!post) return false;
     if (post.status !== "Published") return false;
@@ -321,6 +326,9 @@
     var postImage = document.getElementById("postImage");
     var postContent = document.getElementById("postContent");
     var postError = document.getElementById("postError");
+    var postCtaText = document.getElementById("postCtaText");
+    var postCtaLink = document.getElementById("postCtaLink");
+    var postCtaButtonText = document.getElementById("postCtaButtonText");
 
     if (!post) {
       if (postError) postError.hidden = false;
@@ -351,6 +359,26 @@
 
     if (postContent) {
       postContent.innerHTML = window.marked ? window.marked.parse(post.content || "") : (post.content || "");
+    }
+
+    if (postCtaText) {
+      postCtaText.textContent = post.cta_text || "Ready to explore territory availability?";
+    }
+
+    if (postCtaButtonText) {
+      postCtaButtonText.textContent = post.cta_button_text || "Explore Availability";
+    }
+
+    if (postCtaLink) {
+      var ctaHref = post.cta_link || "/apply";
+      postCtaLink.href = ctaHref;
+      if (isExternalUrl(ctaHref)) {
+        postCtaLink.target = "_blank";
+        postCtaLink.rel = "noopener noreferrer";
+      } else {
+        postCtaLink.removeAttribute("target");
+        postCtaLink.removeAttribute("rel");
+      }
     }
   }
 
