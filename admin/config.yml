@@ -32,7 +32,7 @@ collections:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Publish Date", name: "date", widget: "datetime", required: true }
       - { label: "Author", name: "author", widget: "string", required: true, default: "SIT™ Team" }
-      - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "150-200 chars" }
       - { label: "Body Content", name: "content", widget: "markdown", required: true }
       - { label: "SEO Title", name: "seo_title", widget: "string", required: true, hint: "Max 60 chars" }
