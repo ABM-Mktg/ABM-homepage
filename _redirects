@@ -1,0 +1,7 @@
+# Canonical domain: send legacy abmize.com hostnames to sitgrf.com (301, forced).
+# Requires abmize.com / www.abmize.com to remain assigned to this Netlify site as aliases.
+# See: https://docs.netlify.com/manage/routing/redirects/redirect-options/#domain-level-redirects
+http://abmize.com/*        https://sitgrf.com/:splat  301!
+https://abmize.com/*       https://sitgrf.com/:splat  301!
+http://www.abmize.com/*    https://sitgrf.com/:splat  301!
+https://www.abmize.com/*   https://sitgrf.com/:splat  301!
