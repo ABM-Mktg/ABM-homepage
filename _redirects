@@ -1,3 +1,8 @@
+# Insights listing and posts (legacy /blog URLs → /insights for SEO and bookmarks).
+/blog              /insights              301
+/blog/             /insights/             301
+/blog/post.html    /insights/post.html    301
+
 # Canonical domain: send legacy abmize.com hostnames to sitgrf.com (301, forced).
 # Requires abmize.com / www.abmize.com to remain assigned to this Netlify site as aliases.
 # See: https://docs.netlify.com/manage/routing/redirects/redirect-options/#domain-level-redirects

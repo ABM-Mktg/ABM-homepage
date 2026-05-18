@@ -20,8 +20,8 @@ collections:
       - { label: "Category Name", name: "name", widget: "string", required: true }
 
   - name: "blog"
-    label: "Blog"
-    label_singular: "Post"
+    label: "Insights"
+    label_singular: "Insight"
     folder: "content/blog"
     create: true
     slug: "{{slug}}-{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"

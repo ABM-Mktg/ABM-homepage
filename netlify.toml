@@ -14,6 +14,6 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
-  for = "/blog/blog.css"
+  for = "/insights/blog.css"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"

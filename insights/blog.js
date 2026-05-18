@@ -89,7 +89,7 @@
   }
 
   function getPostUrl(slug) {
-    return "/blog/post.html?slug=" + encodeURIComponent(slug);
+    return "/insights/post.html?slug=" + encodeURIComponent(slug);
   }
 
   function getCategoryLabel(category) {
@@ -313,7 +313,9 @@
 
   function renderPost(posts) {
     var params = new URLSearchParams(window.location.search);
-    var pathSlug = window.location.pathname.replace(/^\/blog\/?/, "").replace(/\/$/, "");
+    var pathSlug = window.location.pathname
+      .replace(/^\/(?:blog|insights)\/?/, "")
+      .replace(/\/$/, "");
     var slug = params.get("slug") || (pathSlug && pathSlug !== "post.html" ? decodeURIComponent(pathSlug) : "");
     var post = posts.find(function (item) {
       return item.slug === slug;
@@ -400,7 +402,7 @@
       var emptyState = document.getElementById("emptyState");
       if (emptyState) {
         emptyState.hidden = false;
-        emptyState.textContent = "Could not load blog posts.";
+        emptyState.textContent = "Could not load posts.";
       }
       var postError = document.getElementById("postError");
       if (postError) {
