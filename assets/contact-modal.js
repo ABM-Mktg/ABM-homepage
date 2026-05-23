@@ -8,7 +8,7 @@
       '  <div class="contact-card">' +
       '    <div class="contact-header">' +
       '      <div class="contact-brand">' +
-      '        <img src="/assets/SIT v2 light/headerlogo.png" alt="SIT Strategic Industry Territory" />' +
+      '        <img src="/assets/SIT v2 light/headerlogo.png" alt="Strategic Industry Territory" />' +
       "      </div>" +
       '      <button class="contact-close" type="button" aria-label="Close contact modal">✕</button>' +
       "    </div>" +

@@ -4,12 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
-    <title>Insight | SIT GroundForce</title>
-    <meta name="description" content="Read SIT GroundForce insights on strategic territory growth." />
+    <title>Strategic Industry Territory</title>
+    <meta name="description" content="Read Strategic Industry Territory insights on strategic territory growth." />
+    <meta property="og:title" content="Strategic Industry Territory" />
     <script>
       (function () {
         var savedTheme = localStorage.getItem("st");
         if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
+    <script>
+      (function () {
+        var brand = "Strategic Industry Territory | ";
+
+        function normalizeSlug(value) {
+          try {
+            return decodeURIComponent(String(value || "")).normalize("NFC").trim();
+          } catch (error) {
+            return String(value || "").trim();
+          }
+        }
+
+        function applyTitle(title) {
+          document.title = title;
+          var titleEl = document.querySelector("title");
+          if (titleEl) titleEl.textContent = title;
+          var ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) ogTitle.setAttribute("content", title);
+        }
+
+        function getSlug() {
+          var params = new URLSearchParams(window.location.search);
+          var pathSlug = window.location.pathname
+            .replace(/^\/(?:blog|insights)\/?/, "")
+            .replace(/\/$/, "");
+          return normalizeSlug(
+            params.get("slug") || (pathSlug && pathSlug !== "post.html" ? pathSlug : "")
+          );
+        }
+
+        function findPost(posts, slug) {
+          return posts.find(function (post) {
+            return normalizeSlug(post.slug) === slug;
+          });
+        }
+
+        function setTitleFromPost(post) {
+          if (!post || !post.title) return;
+          applyTitle(brand + post.title);
+        }
+
+        var slug = getSlug();
+        if (!slug) return;
+
+        fetch("/content/blog/" + encodeURIComponent(slug) + ".json", { cache: "no-store" })
+          .then(function (response) {
+            if (response.ok) return response.json();
+            return fetch("/.netlify/functions/blog-posts", { cache: "no-store" })
+              .then(function (apiResponse) {
+                if (!apiResponse.ok) return null;
+                return apiResponse.json();
+              })
+              .then(function (posts) {
+                if (!Array.isArray(posts)) return null;
+                return findPost(posts, slug);
+              });
+          })
+          .then(setTitleFromPost)
+          .catch(function () {});
       })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +87,7 @@
         <a href="/" class="nl"
           ><img
             src="/assets/SIT v2 light/headerlogo.png"
-            alt="SIT Strategic Industry Territory"
+            alt="Strategic Industry Territory"
         /></a>
         <div class="nk">
           <a href="/#groundforce">GroundForce&#8482;</a
@@ -132,6 +194,6 @@
     <script src="/assets/contact-modal.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="/insights/blog.js"></script>
+    <script src="/insights/blog.js?v=2"></script>
   </body>
 </html>

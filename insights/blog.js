@@ -92,6 +92,61 @@
     return "/insights/post.html?slug=" + encodeURIComponent(slug);
   }
 
+  var POST_PAGE_BRAND = "Strategic Industry Territory";
+
+  function normalizeSlug(value) {
+    try {
+      return decodeURIComponent(String(value || "")).normalize("NFC").trim();
+    } catch (error) {
+      return String(value || "").trim();
+    }
+  }
+
+  function buildPostPageTitle(postTitle) {
+    return POST_PAGE_BRAND + " | " + String(postTitle || "").trim();
+  }
+
+  function applyDocumentTitle(title) {
+    document.title = title;
+    var titleEl = document.querySelector("title");
+    if (titleEl) titleEl.textContent = title;
+  }
+
+  function setPostDetailPageTitle(post) {
+    var title = buildPostPageTitle(post && post.title);
+    applyDocumentTitle(title);
+
+    var metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription && post) {
+      metaDescription.setAttribute(
+        "content",
+        post.meta_description || post.excerpt || metaDescription.getAttribute("content") || ""
+      );
+    }
+
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+      ogTitle = document.createElement("meta");
+      ogTitle.setAttribute("property", "og:title");
+      document.head.appendChild(ogTitle);
+    }
+    ogTitle.setAttribute("content", title);
+  }
+
+  function keepPostDetailPageTitle(post) {
+    if (!post || !post.title) return;
+    var title = buildPostPageTitle(post.title);
+    applyDocumentTitle(title);
+
+    window.setTimeout(function () {
+      applyDocumentTitle(title);
+    }, 0);
+
+    window.setTimeout(function () {
+      applyDocumentTitle(title);
+    }, 250);
+  }
+
   function getCategoryLabel(category) {
     if (!category) return "";
     if (typeof category === "string") return category;
@@ -316,9 +371,11 @@
     var pathSlug = window.location.pathname
       .replace(/^\/(?:blog|insights)\/?/, "")
       .replace(/\/$/, "");
-    var slug = params.get("slug") || (pathSlug && pathSlug !== "post.html" ? decodeURIComponent(pathSlug) : "");
+    var slug = normalizeSlug(
+      params.get("slug") || (pathSlug && pathSlug !== "post.html" ? pathSlug : "")
+    );
     var post = posts.find(function (item) {
-      return item.slug === slug;
+      return normalizeSlug(item.slug) === slug;
     });
 
     var postTitle = document.getElementById("postTitle");
@@ -335,12 +392,13 @@
     if (!post) {
       if (postError) postError.hidden = false;
       if (postTitle) postTitle.textContent = "Post Not Found";
+      setPostDetailPageTitle({ title: "Post Not Found" });
       return;
     }
 
     if (postError) postError.hidden = true;
 
-    document.title = post.title + " | SIT Insights";
+    setPostDetailPageTitle(post);
 
     if (postTitle) postTitle.textContent = post.title;
     if (postMeta) postMeta.textContent = (post.author ? post.author + " | " : "") + formatDate(post.date);
@@ -382,6 +440,8 @@
         postCtaLink.removeAttribute("rel");
       }
     }
+
+    keepPostDetailPageTitle(post);
   }
 
   async function init() {
