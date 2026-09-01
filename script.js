@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const getStartedBtn = document.querySelector('.hero-btn');
+    const getStartedBtn = document.querySelector('button.hero-btn');
     const applyNowBtn = document.querySelector('.apply-now-btn');
     const personalInfoModal = document.getElementById('personalInfoModal');
     const closePersonalInfoModal = document.getElementById('closePersonalInfoModal');
